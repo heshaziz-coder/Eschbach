@@ -1,0 +1,22 @@
+# secrets (kie.ai API key) - never commit
+.env
+
+# disposable intermediates, regenerable with tools/
+.tmp/
+fotos/
+fotos_cut/
+
+# raw kie.ai scene sources (the site uses the .jpg/.webp exports)
+assets/scenes*/*.png
+assets/scenes*/_kie_log.jsonl
+
+# old Blender scroll-hero frames (hero is a photo now; regenerate via tools/blender/render_hero.py)
+frames/
+
+# misc
+__pycache__/
+*.pyc
+node_modules/
+Thumbs.db
+desktop.ini
+*.mp4

@@ -1,0 +1,116 @@
+{
+ "terrasse": {
+  "image": "assets/scenes_v2/terrasse.png",
+  "contact_y": 0.74,
+  "pot_h": 0.33,
+  "tint": 0.45,
+  "exposure": 1.0,
+  "side": 0.45,
+  "rim": 0.28,
+  "rim_color": [
+   255,
+   205,
+   150
+  ],
+  "shadow": {
+   "sx": -0.55,
+   "sy": 0.55,
+   "opacity": 0.55,
+   "blur_near": 5,
+   "blur_far": 38,
+   "color": [
+    70,
+    72,
+    88
+   ]
+  },
+  "contact": 0.75,
+  "reflection": 0
+ },
+ "lobby": {
+  "image": "assets/scenes_v2/lobby.png",
+  "contact_y": 0.74,
+  "pot_h": 0.33,
+  "tint": 0.55,
+  "exposure": 0.95,
+  "side": 0.35,
+  "rim": 0.08,
+  "rim_color": [
+   255,
+   215,
+   170
+  ],
+  "shadow": {
+   "sx": -0.35,
+   "sy": 0.18,
+   "opacity": 0.42,
+   "blur_near": 10,
+   "blur_far": 55,
+   "color": [
+    80,
+    55,
+    35
+   ]
+  },
+  "contact": 0.8,
+  "reflection": 0.22,
+  "reflection_blur": 7
+ },
+ "garten": {
+  "image": "assets/scenes_v2/garten.png",
+  "contact_y": 0.775,
+  "pot_h": 0.33,
+  "tint": 0.35,
+  "exposure": 1.0,
+  "side": -0.4,
+  "rim": 0,
+  "rim_color": [
+   255,
+   230,
+   190
+  ],
+  "shadow": {
+   "sx": 0.75,
+   "sy": 0.16,
+   "opacity": 0.5,
+   "blur_near": 4,
+   "blur_far": 30,
+   "color": [
+    95,
+    90,
+    110
+   ]
+  },
+  "contact": 0.7,
+  "reflection": 0
+ },
+ "penthouse": {
+  "image": "assets/scenes_v2/penthouse.png",
+  "contact_y": 0.74,
+  "pot_h": 0.33,
+  "tint": 0.45,
+  "exposure": 0.85,
+  "side": -0.25,
+  "rim": 0.32,
+  "rim_color": [
+   255,
+   200,
+   160
+  ],
+  "shadow": {
+   "sx": 0.08,
+   "sy": 0.35,
+   "opacity": 0.32,
+   "blur_near": 8,
+   "blur_far": 70,
+   "color": [
+    60,
+    45,
+    35
+   ]
+  },
+  "contact": 0.8,
+  "reflection": 0,
+  "reflection_blur": 14
+ }
+}

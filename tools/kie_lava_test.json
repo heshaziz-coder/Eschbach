@@ -1,0 +1,161 @@
+[
+ {
+  "id": "terrasse_v3",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "prompt": "One single continuous photograph, not a collage. Award-winning architectural photograph of a minimalist rooftop terrace at golden hour, shot for an interior-design magazine. Floor: large square light-grey honed concrete slabs, each exactly 60 x 60 cm, laid in a perfectly straight grid with thin dark joints; the grid is aligned with the camera so the joints run straight toward the vanishing point in the centre (one-point perspective), and horizontal joints cross the frame; the centre of a slab lies at the exact horizontal centre of the image, about 74 percent down from the top. Behind, at about 6 metres distance, a low board-formed exposed-concrete parapet wall, 1 metre high, runs across the whole frame; beyond it a soft, out-of-focus Mediterranean hillside town and a warm evening sky with thin clouds. Left and right edges: two mature olive trees in large concrete planters, partly cropped, their dappled shadows reaching onto the floor. Warm low sun from the back left, long soft shadows falling diagonally toward the front right, subtle warm bounce light, gentle haze. The centre of the floor is completely empty: nothing stands in the middle third of the image. Camera: full-frame, 35 mm lens, camera height 1.2 m, level, very slight downward tilt, horizon at 42 percent from the top, symmetrical, f/5.6, crisp floor detail, natural colours, fine film grain, photorealistic. No people, no furniture in the centre, no planters or pots in the centre, no text, no watermark."
+ },
+ {
+  "id": "terrasse__u-pot__volcanic-black",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/terrasse_upot_black_raw.png"
+  ],
+  "prompt": "Photo retouch of the attached photograph. A large black lava-stone planter (90 cm diameter, 70 cm high) has been placed on the rooftop terrace in the centre. Keep the planter EXACTLY as it is: identical outline, size, position, proportions, rim, pore texture and colour. Do not move, resize, redraw, restyle or replace it, and do not add plants or soil. Keep the whole scene identical as well: same framing, same floor slabs and joints, same trees, wall, town and sky. Only integrate the planter physically and photographically into the scene: 1) a realistic dark contact shadow and soft ambient occlusion exactly where its round base touches the concrete floor, so it clearly stands on the floor; 2) a long cast shadow from the low warm sun at the back left, falling diagonally toward the front right across the slabs, with the same direction, length and softness as the olive tree shadows; 3) relight the planter for warm golden-hour backlight: the sun side gets a subtle warm rim highlight along its left edge and rim, the side facing the camera becomes slightly darker and cooler, with soft sky fill; remove any studio lighting look; 4) match colour temperature, contrast, sharpness, grain and depth of field of the photo. Photorealistic architectural photography."
+ },
+ {
+  "id": "terrasse_v4",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "prompt": "One single continuous photograph, not a collage. Architectural lifestyle photograph of a modern penthouse roof terrace at golden hour, as in a premium design magazine. Floor: square light-grey concrete slabs, each exactly 60 x 60 cm, in a perfectly straight grid with thin dark joints, aligned with the camera (one-point perspective, joints run straight toward a central vanishing point). Background, about 7 metres away: the glass facade of the penthouse with floor-to-ceiling sliding glass doors 2.4 m high in slim black frames and a flat white roof edge above, warm interior lights glowing softly. Furniture for scale, all standing on the SAME row of slabs as the empty centre spot, about 4 metres from the camera: on the left, about 1.6 m left of centre, a low teak outdoor lounge armchair with off-white cushions (seat height 40 cm, backrest 75 cm); on the right, about 1.4 m right of centre, a small round outdoor side table 45 cm high with a glass and a book on it, and behind it a wooden outdoor sofa. The exact horizontal centre of the image, between the chair and the side table, is a completely empty, clear patch of floor where one large planter will later stand; its floor contact point lies at the horizontal centre about 66 percent down from the top of the frame. Warm low sun from the left, soft long shadows of the furniture falling to the right, gentle warm bounce light, calm and inviting. Camera: full-frame, 50 mm lens, standing eye height 1.6 m, level with slight downward tilt, horizon at about 40 percent from the top, symmetrical composition, f/5.6, natural colours, fine grain, photorealistic. No people, no planters, no pots, no plants in the centre, nothing in the middle of the image, no text, no watermark."
+ },
+ {
+  "id": "terrasse4__u-pot__volcanic-black",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/terrasse4_upot_black_raw.png"
+  ],
+  "prompt": "Photo retouch of the attached photograph. A black lava-stone planter (90 cm diameter, 70 cm high) has been placed on the roof terrace in the centre, between the lounge chair and the side table. Keep the planter EXACTLY as it is: identical outline, size, position, proportions, rim, pore texture and colour. Do not move, resize, redraw, restyle or replace it, and do not add plants or soil. Keep the whole scene identical too: same framing, furniture, floor slabs and joints, facade and sky. Only integrate the planter physically and photographically: 1) a realistic dark contact shadow and soft ambient occlusion exactly where its round base touches the concrete floor, so it clearly stands on the floor; 2) a cast shadow from the low warm sun on the left, falling to the right across the slabs with the same direction, length and softness as the shadows of the lounge chair, side table and sofa; 3) relight the planter for this warm golden-hour side light: its left side is lit warm with soft highlights on the lava pores and rim, its right side falls into soft shade; remove the studio lighting look; 4) a faint reflection of the planter in the glass doors behind it is optional but must stay subtle; 5) match colour temperature, contrast, sharpness and grain of the photo. Photorealistic architectural photography."
+ },
+ {
+  "id": "terrasse_v5",
+  "aspect_ratio": "4:3",
+  "resolution": "2K",
+  "prompt": "One single continuous photograph, not a collage. Calm architectural detail photograph of the quiet corner of a modern roof terrace at golden hour, framed tightly around one spot, like a product photo in a design magazine. In the centre background, about 1.2 m behind the empty spot, stands a smooth board-formed exposed-concrete wall, 2.2 m high, lit by warm low sun from the left with soft leaf shadows; on the left, partly cropped by the frame, a long low teak bench (seat height 45 cm) stands on the same floor row; on the right edge a slim black steel railing and a glimpse of soft out-of-focus sky and distant hills. Floor: square light-grey concrete slabs, each exactly 60 x 60 cm, straight grid with thin dark joints, aligned with the camera (one-point perspective, joints run straight toward a vanishing point in the centre). The exact horizontal centre of the image is a completely empty, clear patch of floor directly in front of the wall where one large planter with a small tree will later stand; its floor contact point lies at the horizontal centre about 80 percent down from the top of the frame. Camera: full-frame, 50 mm lens, placed 4.5 m in front of the empty spot at a camera height of exactly 1.15 m above the floor (hip height, NOT eye height), level, horizon line at about 45 percent from the top of the frame, f/4, the wall slightly soft. Warm golden-hour side light from the left, soft long shadows to the right, natural colours, fine grain, photorealistic. No people, no planters, no pots, no plants in the centre, nothing standing in the middle of the image, no text, no watermark."
+ },
+ {
+  "id": "t5__u-pot__volcanic-black",
+  "aspect_ratio": "4:3",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/t5_upot_black_raw.png"
+  ],
+  "prompt": "Photo retouch of the attached photograph. A black lava-stone planter, 90 cm in diameter and 70 cm high, stands on the terrace in the centre, 1.2 m in front of the concrete wall. Keep its size, its position on the floor, its silhouette width, its U-shaped profile, its black colour and its porous lava-stone texture exactly as in the attached image. But correct its PERSPECTIVE to this photograph's camera, which is only about 0.8 m above the floor: the rim is at almost exactly eye level, so the top rim must appear as a very flat, thin ellipse seen nearly edge-on (we look only very slightly down onto it), and the bottom of the planter curves accordingly; it must share the same vanishing point and horizon as the floor joints. Plant a beautiful mature bonsai-style garden tree in the planter: a Japanese black pine (niwaki) with an elegant twisting trunk and cloud-pruned layered foliage pads, about 1 m tall above the rim, in dark soil with a little green moss, so the planter is clearly the hero of the image. Integrate everything photographically: dark contact shadow and soft ambient occlusion where the planter's base touches the slabs; a soft cast shadow of planter and tree falling to the right like the bench shadow and the leaf shadows; warm golden-hour light from the left on the planter, the trunk and the foliage, the right side in soft shade; the tree may cast a soft shadow onto the wall. Keep everything else identical: framing, wall, bench, railing, floor grid. Match colour, contrast, sharpness and grain. Photorealistic architectural photograph."
+ },
+ {
+  "id": "holo_wohnen__u-pot__volcanic-black",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   "fotos/lava/u-pot/volcanic-black.jpg"
+  ],
+  "prompt": "Photorealistic interior photograph for a premium planter brand. The attached image shows the exact product: a black lava-stone planter with a rough, porous volcanic texture (ESCHBACH Lava U Pot, 90 cm diameter, 70 cm high). Reproduce this planter faithfully - same U-shaped profile with slightly rounded base, same rim, same black colour with grey pores - and place it in the scene. Scene: a bright, elegant European old-building apartment living room (Altbau) in soft natural daylight from tall white French windows on the left; light oak herringbone parquet floor; warm off-white walls with a white skirting board; a grey-beige linen sofa (seat height 45 cm) with a knitted throw, a low walnut coffee table with an open book, a few framed prints on the wall. The planter stands in the foreground in the exact horizontal centre of the image, its base about 85 percent down from the top, large in the frame but with space around it, next to the end of the sofa so its real size is obvious: it is clearly taller than the sofa seat and almost as high as the sofa armrest. Planted in it: a beautiful mature bonsai-style garden tree, a Japanese black pine (niwaki) with an elegant curved trunk and cloud-pruned layered foliage pads, about 1.3 m tall above the rim, in dark soil with a little green moss. Camera: standing eye height about 1.5 m, 35 mm lens, looking slightly down so the top of the soil is visible, natural perspective; soft diffuse window light, gentle realistic contact shadow and soft shadow on the parquet, subtle reflections, calm Scandinavian editorial style, natural colours, fine grain. No people, no text, no logos, no watermark."
+ },
+ {
+  "id": "lava_paris__u-pot__volcanic-black",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   "fotos/lava/u-pot/volcanic-black.jpg"
+  ],
+  "prompt": "Scene: an elegant Parisian Haussmann apartment salon: tall white French windows on the right with soft overcast daylight streaming in, ornate white plaster ceiling mouldings and wall panelling, dark smoked-oak chevron parquet floor, in the softly blurred background a dusty-rose velvet sofa with a linen throw, a low marble coffee table with two books, and framed abstract prints on the wall. Plant: a lush, healthy Kentia palm (Howea forsteriana) with several arching fronds, about 1.6 m tall above the rim, in dark soil. The attached image shows the exact product: an ESCHBACH Lava U Pot planter, 90 cm in diameter and 70 cm high, black volcanic lava-stone look with a rough porous surface of small grey pores, U-shaped profile with gently rounded base and a simple straight rim. Reproduce this planter faithfully (same proportions, rim, colour and pore texture) and make it the hero of the photograph. Composition: vertical 4:5 editorial product photograph; the planter stands on the floor in the exact horizontal centre of the frame, its base about 82 percent down from the top, the planter about 40 percent of the image width; the plant rises well above it; generous space around. Camera: full-frame camera, 50 mm lens at f/2.8, camera height about 1.1 m, looking very slightly down so the dark soil surface is just visible inside the rim; background softly out of focus, the planter tack sharp. Lighting and integration: completely natural light, physically correct soft contact shadow where the base touches the floor, a soft cast shadow matching the light direction, true-to-life colours and textures. Extremely photorealistic, indistinguishable from a real photograph taken by a professional interior and architecture photographer for a premium design magazine, subtle film grain, no CGI look, no oversaturation. No people, no text, no logos, no watermark, only one planter."
+ },
+ {
+  "id": "lava_garten__u-pot__volcanic-black",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   "fotos/lava/u-pot/volcanic-black.jpg"
+  ],
+  "prompt": "Scene: a formal contemporary garden at golden hour: pale honed travertine paving with large rectangular slabs, a long narrow reflecting water rill running straight back from behind the planter toward the background, neatly clipped dark-green box hedges and box balls on both sides, tall hornbeam hedges in the soft background, warm low evening sun from the back left, a hint of a modern outdoor dining table at the far right edge. Plant: a graceful green Japanese maple (Acer palmatum) with a single slender trunk and a light, airy canopy, about 1.8 m tall above the rim, in dark soil. The attached image shows the exact product: an ESCHBACH Lava U Pot planter, 90 cm in diameter and 70 cm high, black volcanic lava-stone look with a rough porous surface of small grey pores, U-shaped profile with gently rounded base and a simple straight rim. Reproduce this planter faithfully (same proportions, rim, colour and pore texture) and make it the hero of the photograph. Composition: vertical 4:5 editorial product photograph; the planter stands on the floor in the exact horizontal centre of the frame, its base about 82 percent down from the top, the planter about 40 percent of the image width; the plant rises well above it; generous space around. Camera: full-frame camera, 50 mm lens at f/2.8, camera height about 1.1 m, looking very slightly down so the dark soil surface is just visible inside the rim; background softly out of focus, the planter tack sharp. Lighting and integration: completely natural light, physically correct soft contact shadow where the base touches the floor, a soft cast shadow matching the light direction, true-to-life colours and textures. Extremely photorealistic, indistinguishable from a real photograph taken by a professional interior and architecture photographer for a premium design magazine, subtle film grain, no CGI look, no oversaturation. No people, no text, no logos, no watermark, only one planter."
+ },
+ {
+  "id": "lava_villa__u-pot__volcanic-black",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   "fotos/lava/u-pot/volcanic-black.jpg"
+  ],
+  "prompt": "Scene: the terrace of a modern minimalist villa in late afternoon: warm beige travertine floor slabs, a long swimming pool with calm water behind the planter, a low clipped box hedge, the villa's floor-to-ceiling glass facade with linen curtains and a light stone wall softly blurred in the background, an outdoor sofa far in the background on the right; soft warm sunlight from the left, gentle long shadows. Plant: a characterful multi-stem olive tree (Olea europaea) with a silvery-green crown, about 1.7 m tall above the rim, in dark soil. The attached image shows the exact product: an ESCHBACH Lava U Pot planter, 90 cm in diameter and 70 cm high, black volcanic lava-stone look with a rough porous surface of small grey pores, U-shaped profile with gently rounded base and a simple straight rim. Reproduce this planter faithfully (same proportions, rim, colour and pore texture) and make it the hero of the photograph. Composition: vertical 4:5 editorial product photograph; the planter stands on the floor in the exact horizontal centre of the frame, its base about 82 percent down from the top, the planter about 40 percent of the image width; the plant rises well above it; generous space around. Camera: full-frame camera, 50 mm lens at f/2.8, camera height about 1.1 m, looking very slightly down so the dark soil surface is just visible inside the rim; background softly out of focus, the planter tack sharp. Lighting and integration: completely natural light, physically correct soft contact shadow where the base touches the floor, a soft cast shadow matching the light direction, true-to-life colours and textures. Extremely photorealistic, indistinguishable from a real photograph taken by a professional interior and architecture photographer for a premium design magazine, subtle film grain, no CGI look, no oversaturation. No people, no text, no logos, no watermark, only one planter."
+ },
+ {
+  "id": "lava_paris__u-pot__antique-white",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/lava_paris__u-pot__volcanic-black.png",
+   "fotos/lava/u-pot/antique-white.jpg"
+  ],
+  "prompt": "Edit the FIRST attached photograph. Replace only the planter: instead of the black U-shaped planter, the planter is now an ESCHBACH Lava U Pot in the colour Antique White: the same U-shaped planter, 90 cm in diameter and 70 cm high, with a porous lava-stone surface in warm off-white / cream with fine light-grey pores, exactly as shown in the SECOND attached product photo (reproduce its shape, proportions, rim, colour and pore texture faithfully). It stands on exactly the same spot: same horizontal centre, its base touching the floor at exactly the same place, and it is shown at its true size relative to the room and to the previous 90 cm planter. The Kentia palm is replanted in the new planter: the same plant, same species, same shape and size of its crown, now rising from this planter's rim, in dark soil. Keep EVERYTHING else pixel-identical: same camera, framing, perspective, room or garden, furniture, light, colours and depth of field. Physically correct soft contact shadow and cast shadow for the new planter, matching the existing light. Extremely photorealistic, indistinguishable from a real photograph, no CGI look. No text, no watermark."
+ },
+ {
+  "id": "lava_garten__u-pot__antique-white",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/lava_garten__u-pot__volcanic-black.png",
+   "fotos/lava/u-pot/antique-white.jpg"
+  ],
+  "prompt": "Edit the FIRST attached photograph. Replace only the planter: instead of the black U-shaped planter, the planter is now an ESCHBACH Lava U Pot in the colour Antique White: the same U-shaped planter, 90 cm in diameter and 70 cm high, with a porous lava-stone surface in warm off-white / cream with fine light-grey pores, exactly as shown in the SECOND attached product photo (reproduce its shape, proportions, rim, colour and pore texture faithfully). It stands on exactly the same spot: same horizontal centre, its base touching the floor at exactly the same place, and it is shown at its true size relative to the room and to the previous 90 cm planter. The Japanese maple is replanted in the new planter: the same plant, same species, same shape and size of its crown, now rising from this planter's rim, in dark soil. Keep EVERYTHING else pixel-identical: same camera, framing, perspective, room or garden, furniture, light, colours and depth of field. Physically correct soft contact shadow and cast shadow for the new planter, matching the existing light. Extremely photorealistic, indistinguishable from a real photograph, no CGI look. No text, no watermark."
+ },
+ {
+  "id": "lava_paris__plate",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/lava_paris__u-pot__volcanic-black.png"
+  ],
+  "prompt": "Edit the attached photograph: completely remove the black planter and the Kentia palm in it, including its shadow and soil. Reconstruct what is behind and under it naturally and seamlessly: the dark chevron parquet floor, the white panelled wall, the sofa, coffee table, windows and pictures, continuing every line, joint and texture correctly in perspective. The spot where it stood must be an empty, clean floor. Keep everything else pixel-identical: same camera, framing, perspective, light, colours, sharpness and depth of field. Photorealistic. No new objects, no text."
+ },
+ {
+  "id": "lava_garten__plate",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/lava_garten__u-pot__volcanic-black.png"
+  ],
+  "prompt": "Edit the attached photograph: completely remove the black planter and the Japanese maple tree in it, including its shadow and soil. Reconstruct what is behind and under it naturally and seamlessly: the travertine paving, the water rill, the box hedges and the background garden, continuing every line, joint and texture correctly in perspective. The spot where it stood must be an empty, clean floor. Keep everything else pixel-identical: same camera, framing, perspective, light, colours, sharpness and depth of field. Photorealistic. No new objects, no text."
+ },
+ {
+  "id": "lava_paris__long-balloon__volcanic-black",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/lava_paris__long-balloon__volcanic-black__raw.png",
+   ".tmp/lava/lava_paris__u-pot__volcanic-black.png"
+  ],
+  "prompt": "Edit the FIRST attached photograph. It shows a tall empty Long Balloon planter (black lava-stone with grey pores, 50 cm diameter, 95 cm high) placed in the scene. Keep this planter EXACTLY as it is: identical position, size, outline, proportions, rim, colour and texture - do not move, resize, reshape or redraw it. Plant into it exactly the same Kentia palm as shown in the SECOND attached photograph (same species, same shape, same size and same character of the crown), rising naturally from dark soil just below the rim of the tall planter. Then integrate the planter photographically: realistic soft contact shadow and ambient occlusion where its base touches the floor, a cast shadow and lighting on the planter that match the light of the scene exactly like in the second photograph, matching colour temperature, contrast, sharpness and grain. Keep everything else pixel-identical: camera, framing, room or garden, furniture, light. Extremely photorealistic, indistinguishable from a real photograph. No text, no watermark."
+ },
+ {
+  "id": "lava_paris__long-balloon__antique-white",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/lava_paris__long-balloon__antique-white__raw.png",
+   ".tmp/lava/lava_paris__u-pot__volcanic-black.png"
+  ],
+  "prompt": "Edit the FIRST attached photograph. It shows a tall empty Long Balloon planter (off-white / cream lava-stone with fine light-grey pores, 50 cm diameter, 95 cm high) placed in the scene. Keep this planter EXACTLY as it is: identical position, size, outline, proportions, rim, colour and texture - do not move, resize, reshape or redraw it. Plant into it exactly the same Kentia palm as shown in the SECOND attached photograph (same species, same shape, same size and same character of the crown), rising naturally from dark soil just below the rim of the tall planter. Then integrate the planter photographically: realistic soft contact shadow and ambient occlusion where its base touches the floor, a cast shadow and lighting on the planter that match the light of the scene exactly like in the second photograph, matching colour temperature, contrast, sharpness and grain. Keep everything else pixel-identical: camera, framing, room or garden, furniture, light. Extremely photorealistic, indistinguishable from a real photograph. No text, no watermark."
+ },
+ {
+  "id": "lava_garten__long-balloon__volcanic-black",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/lava_garten__long-balloon__volcanic-black__raw.png",
+   ".tmp/lava/lava_garten__u-pot__volcanic-black.png"
+  ],
+  "prompt": "Edit the FIRST attached photograph. It shows a tall empty Long Balloon planter (black lava-stone with grey pores, 50 cm diameter, 95 cm high) placed in the scene. Keep this planter EXACTLY as it is: identical position, size, outline, proportions, rim, colour and texture - do not move, resize, reshape or redraw it. Plant into it exactly the same Japanese maple tree as shown in the SECOND attached photograph (same species, same shape, same size and same character of the crown), rising naturally from dark soil just below the rim of the tall planter. Then integrate the planter photographically: realistic soft contact shadow and ambient occlusion where its base touches the floor, a cast shadow and lighting on the planter that match the light of the scene exactly like in the second photograph, matching colour temperature, contrast, sharpness and grain. Keep everything else pixel-identical: camera, framing, room or garden, furniture, light. Extremely photorealistic, indistinguishable from a real photograph. No text, no watermark."
+ },
+ {
+  "id": "lava_garten__long-balloon__antique-white",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/lava/lava_garten__long-balloon__antique-white__raw.png",
+   ".tmp/lava/lava_garten__u-pot__volcanic-black.png"
+  ],
+  "prompt": "Edit the FIRST attached photograph. It shows a tall empty Long Balloon planter (off-white / cream lava-stone with fine light-grey pores, 50 cm diameter, 95 cm high) placed in the scene. Keep this planter EXACTLY as it is: identical position, size, outline, proportions, rim, colour and texture - do not move, resize, reshape or redraw it. Plant into it exactly the same Japanese maple tree as shown in the SECOND attached photograph (same species, same shape, same size and same character of the crown), rising naturally from dark soil just below the rim of the tall planter. Then integrate the planter photographically: realistic soft contact shadow and ambient occlusion where its base touches the floor, a cast shadow and lighting on the planter that match the light of the scene exactly like in the second photograph, matching colour temperature, contrast, sharpness and grain. Keep everything else pixel-identical: camera, framing, room or garden, furniture, light. Extremely photorealistic, indistinguishable from a real photograph. No text, no watermark."
+ }
+]

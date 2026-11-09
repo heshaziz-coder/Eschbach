@@ -1,0 +1,32 @@
+[
+  {
+    "id": "terrasse",
+    "prompt": "Architectural photograph of a minimalist concrete terrace at golden hour. Large-format smooth grey concrete floor slabs with fine joints, a low board-formed concrete wall behind, soft out-of-focus olive trees and a pale evening sky beyond. Warm low sun from the left casting long soft shadows across the floor. The centre foreground of the floor is completely empty and clear: an open, evenly lit spot where a single large object will later be placed. Camera: full-frame, 50 mm lens, camera height 1.1 m, looking almost level and only very slightly down, horizon line at about 40 percent from the top of the frame, the empty floor spot sits at the bottom centre third. Photorealistic, natural light, subtle film grain, editorial interior-design magazine style, calm, premium. Absolutely no planters, no pots, no vases, no furniture in the centre, no people, no text, no watermark.",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  {
+    "id": "innenhof",
+    "prompt": "Architectural photograph of a quiet mediterranean courtyard in late afternoon. Lime-washed off-white walls with soft texture, a deep arched passage in the background, warm sandstone floor pavers, dappled leaf shadows from an unseen tree falling across the wall. The centre foreground of the floor is completely empty and clear: an open, evenly lit spot where a single large object will later be placed. Camera: full-frame, 50 mm lens, camera height 1.1 m, looking almost level and only very slightly down, horizon line at about 40 percent from the top of the frame, the empty floor spot sits at the bottom centre third. Photorealistic, natural light, subtle film grain, editorial architecture magazine style, serene, premium. Absolutely no planters, no pots, no vases, no furniture in the centre, no people, no text, no watermark.",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  {
+    "id": "lobby",
+    "prompt": "Interior photograph of a luxury hotel lobby with travertine. Honed travertine floor and a monumental travertine wall with horizontal veining, warm indirect cove lighting, a slim brass detail and a dark walnut reception desk far in the soft-focus background, large window on the right letting in soft daylight. The centre foreground of the floor is completely empty and clear: an open, evenly lit spot where a single large object will later be placed. Camera: full-frame, 50 mm lens, camera height 1.1 m, looking almost level and only very slightly down, horizon line at about 40 percent from the top of the frame, the empty floor spot sits at the bottom centre third. Photorealistic, calm, warm neutral palette, editorial hospitality design magazine style, premium. Absolutely no planters, no pots, no vases, no furniture in the centre, no people, no text, no watermark.",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  {
+    "id": "zen",
+    "prompt": "Photograph of a contemporary Japanese zen garden in soft overcast morning light. Finely raked pale grey gravel in parallel lines, a few dark basalt stones and cushions of moss at the sides, a charred-timber (shou sugi ban) wall and a slender maple in soft focus behind. A flat, smooth stepping-stone platform of dark slate in the centre foreground is completely empty and clear: an open spot where a single large object will later be placed. Camera: full-frame, 50 mm lens, camera height 1.1 m, looking almost level and only very slightly down, horizon line at about 40 percent from the top of the frame, the empty spot sits at the bottom centre third. Photorealistic, quiet, muted greens and greys, editorial garden-design magazine style, premium. Absolutely no planters, no pots, no vases, no lanterns in the centre, no people, no text, no watermark.",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  {
+    "id": "dachterrasse",
+    "prompt": "Photograph of a rooftop terrace above a European city at blue hour. Weathered teak decking, a frameless glass balustrade, the city skyline with warm window lights softly out of focus, deep blue sky with a last warm glow at the horizon, a warm wall light from the left. The centre foreground of the deck is completely empty and clear: an open, evenly lit spot where a single large object will later be placed. Camera: full-frame, 50 mm lens, camera height 1.1 m, looking almost level and only very slightly down, horizon line at about 40 percent from the top of the frame, the empty floor spot sits at the bottom centre third. Photorealistic, cinematic but natural, editorial architecture magazine style, premium. Absolutely no planters, no pots, no vases, no furniture in the centre, no people, no text, no watermark.",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  }
+]

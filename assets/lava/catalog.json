@@ -1,0 +1,60 @@
+{
+ "collection": "Lava",
+ "url": "https://eschbach-design.com/collections/pflanzkuebel-kollektion-lava",
+ "scenes": [
+  {
+   "id": "lava_paris",
+   "name": "Pariser Altbau",
+   "thumb": "assets/lava/lava_paris/thumb.webp"
+  },
+  {
+   "id": "lava_garten",
+   "name": "Formaler Garten",
+   "thumb": "assets/lava/lava_garten/thumb.webp"
+  }
+ ],
+ "forms": [
+  {
+   "id": "u-pot",
+   "name": "U Pot",
+   "size": "D 90 × H 70 cm",
+   "price": "1.070 €",
+   "thumb": "assets/pots/lava/u-pot/volcanic-black.webp",
+   "variants": {
+    "volcanic-black": {
+     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-lava-collection-volcanic-black"
+    },
+    "antique-white": {
+     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-lava-collection-antique-white"
+    }
+   }
+  },
+  {
+   "id": "long-balloon",
+   "name": "Long Balloon",
+   "size": "D 50 × H 95 cm",
+   "price": "520 €",
+   "thumb": "assets/pots/lava/long-balloon/volcanic-black.webp",
+   "variants": {
+    "volcanic-black": {
+     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-lava-collection-volcanic-black"
+    },
+    "antique-white": {
+     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-lava-collection-antique-white"
+    }
+   }
+  }
+ ],
+ "colours": [
+  {
+   "id": "volcanic-black",
+   "name": "Volcanic Black",
+   "hex": "#2e2d2c"
+  },
+  {
+   "id": "antique-white",
+   "name": "Antique White",
+   "hex": "#e4ddd0"
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+  "_doc": "Per-scene match settings for render_atelier.py. horizon/spot are fractions of the scene image (from top/left); horizon read from the floor vanishing lines. sun = [azimuth deg (0 = light from the camera side, +90 = from the right, -90 = from the left, 180 = from behind), elevation deg]. Heights are XXL sizes so vessels read well in wide shots.",
+  "resolution": [
+    1600,
+    900
+  ],
+  "form_heights": {
+    "balloon": 0.75,
+    "highballoon": 0.95,
+    "egg": 0.85,
+    "talleg": 1.25,
+    "bowl": 0.55,
+    "box": 0.7
+  },
+  "scenes": [
+    {
+      "id": "terrasse",
+      "name": "Betonterrasse",
+      "image": "assets/scenes/terrasse.png",
+      "horizon": 0.27,
+      "spot": [
+        0.47,
+        0.73
+      ],
+      "sun": [
+        115,
+        12
+      ],
+      "sun_color": [
+        1.0,
+        0.8,
+        0.58
+      ],
+      "sun_strength": 6.0,
+      "sun_softness": 2,
+      "world_strength": 0.18,
+      "scale": 0.82,
+      "fill": 1.4
+    },
+    {
+      "id": "innenhof",
+      "name": "Mediterraner Hof",
+      "image": "assets/scenes/innenhof.png",
+      "horizon": 0.48,
+      "spot": [
+        0.52,
+        0.8
+      ],
+      "sun": [
+        78,
+        32
+      ],
+      "sun_color": [
+        1.0,
+        0.86,
+        0.68
+      ],
+      "sun_strength": 5.5,
+      "sun_softness": 3,
+      "world_strength": 0.16
+    },
+    {
+      "id": "lobby",
+      "name": "Hotel-Lobby",
+      "image": "assets/scenes/lobby.png",
+      "horizon": 0.5,
+      "spot": [
+        0.56,
+        0.82
+      ],
+      "sun": [
+        95,
+        22
+      ],
+      "sun_color": [
+        1.0,
+        0.96,
+        0.9
+      ],
+      "sun_strength": 3.2,
+      "sun_softness": 28,
+      "world_strength": 0.32
+    },
+    {
+      "id": "zen",
+      "name": "Zen-Garten",
+      "image": "assets/scenes/zen.png",
+      "horizon": 0.38,
+      "spot": [
+        0.5,
+        0.87
+      ],
+      "sun": [
+        -45,
+        45
+      ],
+      "sun_color": [
+        0.95,
+        0.97,
+        1.0
+      ],
+      "sun_strength": 2.6,
+      "sun_softness": 40,
+      "world_strength": 0.32,
+      "base_z": 0.04,
+      "scale": 0.8,
+      "fill": 0.4
+    },
+    {
+      "id": "dachterrasse",
+      "name": "Dachterrasse",
+      "image": "assets/scenes/dachterrasse.png",
+      "horizon": 0.38,
+      "spot": [
+        0.52,
+        0.82
+      ],
+      "sun": [
+        -80,
+        20
+      ],
+      "sun_color": [
+        1.0,
+        0.72,
+        0.45
+      ],
+      "sun_strength": 4.5,
+      "sun_softness": 12,
+      "world_strength": 0.14,
+      "fill": 0.6
+    }
+  ]
+}

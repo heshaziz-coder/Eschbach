@@ -1,0 +1,2739 @@
+{
+ "scenes": [
+  {
+   "id": "terrasse",
+   "name": "Architektur-Terrasse",
+   "image": "assets/scenes_v2/terrasse.webp",
+   "thumb": "assets/scenes_v2/terrasse_thumb.webp",
+   "w": 2400,
+   "h": 1340,
+   "light": {
+    "contact_y": 0.74,
+    "pot_h": 0.33,
+    "tint": 0.45,
+    "exposure": 1.0,
+    "side": 0.45,
+    "rim": 0.28,
+    "rim_color": [
+     255,
+     205,
+     150
+    ],
+    "shadow": {
+     "sx": -0.55,
+     "sy": 0.55,
+     "opacity": 0.55,
+     "blur_near": 5,
+     "blur_far": 38,
+     "color": [
+      70,
+      72,
+      88
+     ]
+    },
+    "contact": 0.75,
+    "reflection": 0
+   }
+  },
+  {
+   "id": "lobby",
+   "name": "Hotel-Lobby",
+   "image": "assets/scenes_v2/lobby.webp",
+   "thumb": "assets/scenes_v2/lobby_thumb.webp",
+   "w": 2400,
+   "h": 1340,
+   "light": {
+    "contact_y": 0.74,
+    "pot_h": 0.33,
+    "tint": 0.55,
+    "exposure": 0.95,
+    "side": 0.35,
+    "rim": 0.08,
+    "rim_color": [
+     255,
+     215,
+     170
+    ],
+    "shadow": {
+     "sx": -0.35,
+     "sy": 0.18,
+     "opacity": 0.42,
+     "blur_near": 10,
+     "blur_far": 55,
+     "color": [
+      80,
+      55,
+      35
+     ]
+    },
+    "contact": 0.8,
+    "reflection": 0.22,
+    "reflection_blur": 7
+   }
+  },
+  {
+   "id": "garten",
+   "name": "Mediterraner Garten",
+   "image": "assets/scenes_v2/garten.webp",
+   "thumb": "assets/scenes_v2/garten_thumb.webp",
+   "w": 2400,
+   "h": 1340,
+   "light": {
+    "contact_y": 0.775,
+    "pot_h": 0.33,
+    "tint": 0.35,
+    "exposure": 1.0,
+    "side": -0.4,
+    "rim": 0,
+    "rim_color": [
+     255,
+     230,
+     190
+    ],
+    "shadow": {
+     "sx": 0.75,
+     "sy": 0.16,
+     "opacity": 0.5,
+     "blur_near": 4,
+     "blur_far": 30,
+     "color": [
+      95,
+      90,
+      110
+     ]
+    },
+    "contact": 0.7,
+    "reflection": 0
+   }
+  },
+  {
+   "id": "penthouse",
+   "name": "Penthouse",
+   "image": "assets/scenes_v2/penthouse.webp",
+   "thumb": "assets/scenes_v2/penthouse_thumb.webp",
+   "w": 2400,
+   "h": 1340,
+   "light": {
+    "contact_y": 0.74,
+    "pot_h": 0.33,
+    "tint": 0.45,
+    "exposure": 0.85,
+    "side": -0.25,
+    "rim": 0.32,
+    "rim_color": [
+     255,
+     200,
+     160
+    ],
+    "shadow": {
+     "sx": 0.08,
+     "sy": 0.35,
+     "opacity": 0.32,
+     "blur_near": 8,
+     "blur_far": 70,
+     "color": [
+      60,
+      45,
+      35
+     ]
+    },
+    "contact": 0.8,
+    "reflection": 0,
+    "reflection_blur": 14
+   }
+  }
+ ],
+ "collections": [
+  {
+   "id": "loft",
+   "name": "Loft",
+   "url": "https://eschbach-design.com/collections/pflanzkuebel-kollektion-loft",
+   "forms": [
+    {
+     "id": "new-egg-pot",
+     "name": "New Egg Pot",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#c7c3bc",
+       "img": "assets/pots/loft/new-egg-pot/off-white.webp",
+       "w": 751,
+       "h": 686,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#79756f",
+       "img": "assets/pots/loft/new-egg-pot/concrete-grey.webp",
+       "w": 751,
+       "h": 686,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#5d4f4c",
+       "img": "assets/pots/loft/new-egg-pot/rust-brown.webp",
+       "w": 751,
+       "h": 688,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-loft-collection-rust-brown"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#4d4b4c",
+       "img": "assets/pots/loft/new-egg-pot/espresso-black.webp",
+       "w": 752,
+       "h": 688,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-loft-collection-espresso-black"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#565960",
+       "img": "assets/pots/loft/new-egg-pot/lead-grey.webp",
+       "w": 751,
+       "h": 688,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-loft-collection-lead-grey"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#a9a9a8",
+       "img": "assets/pots/loft/new-egg-pot/light-grey.webp",
+       "w": 753,
+       "h": 685,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "tall-balloon",
+     "name": "Tall Balloon",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#d3d0c9",
+       "img": "assets/pots/loft/tall-balloon/off-white.webp",
+       "w": 685,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-balloon-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#6d6a66",
+       "img": "assets/pots/loft/tall-balloon/concrete-grey.webp",
+       "w": 689,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-balloon-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#5a4f4a",
+       "img": "assets/pots/loft/tall-balloon/rust-brown.webp",
+       "w": 688,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-balloon-loft-collection-rust-brown"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#524e4f",
+       "img": "assets/pots/loft/tall-balloon/espresso-black.webp",
+       "w": 688,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-balloon-loft-collection-espresso-black"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#5c5e5f",
+       "img": "assets/pots/loft/tall-balloon/lead-grey.webp",
+       "w": 688,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-balloon-loft-collection-lead-grey"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#a2a2a2",
+       "img": "assets/pots/loft/tall-balloon/light-grey.webp",
+       "w": 689,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-balloon-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "high-balloon",
+     "name": "High Balloon",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#c9c6be",
+       "img": "assets/pots/loft/high-balloon/off-white.webp",
+       "w": 752,
+       "h": 794,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#7e7a77",
+       "img": "assets/pots/loft/high-balloon/concrete-grey.webp",
+       "w": 750,
+       "h": 795,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#564a49",
+       "img": "assets/pots/loft/high-balloon/rust-brown.webp",
+       "w": 752,
+       "h": 794,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-loft-collection-rust-brown"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#514d51",
+       "img": "assets/pots/loft/high-balloon/espresso-black.webp",
+       "w": 752,
+       "h": 795,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-loft-collection-espresso-black"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#616568",
+       "img": "assets/pots/loft/high-balloon/lead-grey.webp",
+       "w": 751,
+       "h": 797,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-loft-collection-lead-grey"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#acaca9",
+       "img": "assets/pots/loft/high-balloon/light-grey.webp",
+       "w": 752,
+       "h": 794,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "balloon",
+     "name": "Balloon",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#c7c4bd",
+       "img": "assets/pots/loft/balloon/off-white.webp",
+       "w": 752,
+       "h": 536,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#74716a",
+       "img": "assets/pots/loft/balloon/concrete-grey.webp",
+       "w": 755,
+       "h": 539,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-loft-collection-concrete-grey"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#545153",
+       "img": "assets/pots/loft/balloon/espresso-black.webp",
+       "w": 752,
+       "h": 540,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-loft-collection-espresso-black"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#696c72",
+       "img": "assets/pots/loft/balloon/lead-grey.webp",
+       "w": 753,
+       "h": 541,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-loft-collection-lead-grey"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#a6a6a2",
+       "img": "assets/pots/loft/balloon/light-grey.webp",
+       "w": 752,
+       "h": 539,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-loft-collection-light-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#5c4a43",
+       "img": "assets/pots/loft/balloon/rust-brown.webp",
+       "w": 752,
+       "h": 540,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-loft-collection-rust-brown"
+      }
+     ]
+    },
+    {
+     "id": "high-conus",
+     "name": "High Conus",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#cac7c2",
+       "img": "assets/pots/loft/high-conus/off-white.webp",
+       "w": 443,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-conus-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#787470",
+       "img": "assets/pots/loft/high-conus/concrete-grey.webp",
+       "w": 456,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-conus-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#675750",
+       "img": "assets/pots/loft/high-conus/rust-brown.webp",
+       "w": 450,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-conus-loft-collection-rust-brown"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#64676e",
+       "img": "assets/pots/loft/high-conus/lead-grey.webp",
+       "w": 453,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-conus-loft-collection-lead-grey"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#535052",
+       "img": "assets/pots/loft/high-conus/espresso-black.webp",
+       "w": 457,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-conus-loft-collection-espresso-black"
+      }
+     ]
+    },
+    {
+     "id": "cube",
+     "name": "Cube",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#dad6d3",
+       "img": "assets/pots/loft/cube/off-white.webp",
+       "w": 753,
+       "h": 690,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#918e87",
+       "img": "assets/pots/loft/cube/concrete-grey.webp",
+       "w": 752,
+       "h": 691,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#6d5b54",
+       "img": "assets/pots/loft/cube/rust-brown.webp",
+       "w": 752,
+       "h": 692,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-loft-collection-rust-brown"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#585355",
+       "img": "assets/pots/loft/cube/espresso-black.webp",
+       "w": 752,
+       "h": 692,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-loft-collection-espresso-black"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#707379",
+       "img": "assets/pots/loft/cube/lead-grey.webp",
+       "w": 752,
+       "h": 691,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-loft-collection-lead-grey"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#bebfba",
+       "img": "assets/pots/loft/cube/light-grey.webp",
+       "w": 752,
+       "h": 691,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "low-cube",
+     "name": "Low Cube",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#d5d2cd",
+       "img": "assets/pots/loft/low-cube/off-white.webp",
+       "w": 751,
+       "h": 563,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cube-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#87837f",
+       "img": "assets/pots/loft/low-cube/concrete-grey.webp",
+       "w": 751,
+       "h": 564,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cube-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#6a5852",
+       "img": "assets/pots/loft/low-cube/rust-brown.webp",
+       "w": 751,
+       "h": 564,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cube-loft-collection-rust-brown"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#696d70",
+       "img": "assets/pots/loft/low-cube/lead-grey.webp",
+       "w": 751,
+       "h": 565,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cube-loft-collection-lead-grey"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#625d5e",
+       "img": "assets/pots/loft/low-cube/espresso-black.webp",
+       "w": 751,
+       "h": 565,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cube-loft-collection-espresso-black"
+      }
+     ]
+    },
+    {
+     "id": "high-cube",
+     "name": "High Cube",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#d5d2cb",
+       "img": "assets/pots/loft/high-cube/off-white.webp",
+       "w": 530,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-cube-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#888480",
+       "img": "assets/pots/loft/high-cube/concrete-grey.webp",
+       "w": 530,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-cube-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#715d57",
+       "img": "assets/pots/loft/high-cube/rust-brown.webp",
+       "w": 529,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-cube-loft-collection-rust-brown"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#555253",
+       "img": "assets/pots/loft/high-cube/espresso-black.webp",
+       "w": 529,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-cube-loft-collection-espresso-black"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#696d74",
+       "img": "assets/pots/loft/high-cube/lead-grey.webp",
+       "w": 530,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-cube-loft-collection-lead-grey"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#bcbcbb",
+       "img": "assets/pots/loft/high-cube/light-grey.webp",
+       "w": 303,
+       "h": 505,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-cube-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "box",
+     "name": "Box",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#d2d2cd",
+       "img": "assets/pots/loft/box/off-white.webp",
+       "w": 836,
+       "h": 472,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#7e7a77",
+       "img": "assets/pots/loft/box/concrete-grey.webp",
+       "w": 836,
+       "h": 473,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#6c5953",
+       "img": "assets/pots/loft/box/rust-brown.webp",
+       "w": 835,
+       "h": 474,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-loft-collection-rust-brown"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#514f51",
+       "img": "assets/pots/loft/box/espresso-black.webp",
+       "w": 836,
+       "h": 473,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-loft-collection-espresso-black"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#6d7077",
+       "img": "assets/pots/loft/box/lead-grey.webp",
+       "w": 835,
+       "h": 474,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-loft-collection-lead-grey"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#b9bab6",
+       "img": "assets/pots/loft/box/light-grey.webp",
+       "w": 836,
+       "h": 473,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "high-box",
+     "name": "High Box",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#d2d0c9",
+       "img": "assets/pots/loft/high-box/off-white.webp",
+       "w": 751,
+       "h": 888,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-box-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#908d89",
+       "img": "assets/pots/loft/high-box/concrete-grey.webp",
+       "w": 745,
+       "h": 884,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-box-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#6c5954",
+       "img": "assets/pots/loft/high-box/rust-brown.webp",
+       "w": 745,
+       "h": 885,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-box-loft-collection-rust-brown"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#524e51",
+       "img": "assets/pots/loft/high-box/espresso-black.webp",
+       "w": 745,
+       "h": 885,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-box-loft-collection-espresso-black"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#64686e",
+       "img": "assets/pots/loft/high-box/lead-grey.webp",
+       "w": 745,
+       "h": 884,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-box-loft-collection-lead-grey"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#bdbdbd",
+       "img": "assets/pots/loft/high-box/light-grey.webp",
+       "w": 746,
+       "h": 884,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-box-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "low-egg-pot",
+     "name": "Low Egg Pot",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#bfbcb6",
+       "img": "assets/pots/loft/low-egg-pot/off-white.webp",
+       "w": 751,
+       "h": 439,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-egg-pot-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#615d5a",
+       "img": "assets/pots/loft/low-egg-pot/concrete-grey.webp",
+       "w": 751,
+       "h": 445,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-egg-pot-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#675550",
+       "img": "assets/pots/loft/low-egg-pot/rust-brown.webp",
+       "w": 751,
+       "h": 443,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-egg-pot-loft-collection-rust-brown"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#575b5e",
+       "img": "assets/pots/loft/low-egg-pot/lead-grey.webp",
+       "w": 751,
+       "h": 440,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-egg-pot-loft-collection-lead-grey"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#454242",
+       "img": "assets/pots/loft/low-egg-pot/espresso-black.webp",
+       "w": 751,
+       "h": 443,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-egg-pot-loft-collection-espresso-black"
+      }
+     ]
+    },
+    {
+     "id": "low-balloon",
+     "name": "Low Balloon",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#c6c3bb",
+       "img": "assets/pots/loft/low-balloon/off-white.webp",
+       "w": 752,
+       "h": 401,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-balloon-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#6e6a66",
+       "img": "assets/pots/loft/low-balloon/concrete-grey.webp",
+       "w": 752,
+       "h": 402,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-balloon-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#67514d",
+       "img": "assets/pots/loft/low-balloon/rust-brown.webp",
+       "w": 751,
+       "h": 405,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-balloon-loft-collection-rust-brown"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#5f6267",
+       "img": "assets/pots/loft/low-balloon/lead-grey.webp",
+       "w": 752,
+       "h": 401,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-balloon-loft-collection-lead-grey"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#524e50",
+       "img": "assets/pots/loft/low-balloon/espresso-black.webp",
+       "w": 752,
+       "h": 402,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-balloon-loft-collection-espresso-black"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#a6a7a2",
+       "img": "assets/pots/loft/low-balloon/light-grey.webp",
+       "w": 749,
+       "h": 401,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-balloon-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "global",
+     "name": "Global",
+     "colours": [
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#bdb9b6",
+       "img": "assets/pots/loft/global/off-white.webp",
+       "w": 753,
+       "h": 626,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-global-loft-collection-off-white"
+      },
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#6a6660",
+       "img": "assets/pots/loft/global/concrete-grey.webp",
+       "w": 750,
+       "h": 631,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-global-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#554039",
+       "img": "assets/pots/loft/global/rust-brown.webp",
+       "w": 753,
+       "h": 627,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-global-loft-collection-rust-brown"
+      }
+     ]
+    },
+    {
+     "id": "tall-egg-pot",
+     "name": "Tall Egg Pot",
+     "colours": [
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#76736c",
+       "img": "assets/pots/loft/tall-egg-pot/concrete-grey.webp",
+       "w": 725,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#5b4842",
+       "img": "assets/pots/loft/tall-egg-pot/rust-brown.webp",
+       "w": 724,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-loft-collection-rust-brown"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#5b5e64",
+       "img": "assets/pots/loft/tall-egg-pot/lead-grey.webp",
+       "w": 723,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-loft-collection-lead-grey"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#494647",
+       "img": "assets/pots/loft/tall-egg-pot/espresso-black.webp",
+       "w": 725,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-loft-collection-espresso-black"
+      },
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#bfbbb5",
+       "img": "assets/pots/loft/tall-egg-pot/off-white.webp",
+       "w": 727,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-loft-collection-off-white"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#a6a7a2",
+       "img": "assets/pots/loft/tall-egg-pot/light-grey.webp",
+       "w": 724,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "grand-egg-pot",
+     "name": "Grand Egg Pot",
+     "colours": [
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#6f6c67",
+       "img": "assets/pots/loft/grand-egg-pot/concrete-grey.webp",
+       "w": 836,
+       "h": 559,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-egg-pot-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#493a36",
+       "img": "assets/pots/loft/grand-egg-pot/rust-brown.webp",
+       "w": 837,
+       "h": 562,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-egg-pot-loft-collection-rust-brown"
+      },
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#b6b2af",
+       "img": "assets/pots/loft/grand-egg-pot/off-white.webp",
+       "w": 839,
+       "h": 555,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-egg-pot-loft-collection-off-white"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#5d6167",
+       "img": "assets/pots/loft/grand-egg-pot/lead-grey.webp",
+       "w": 838,
+       "h": 560,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-egg-pot-loft-collection-lead-grey"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#484546",
+       "img": "assets/pots/loft/grand-egg-pot/espresso-black.webp",
+       "w": 838,
+       "h": 561,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-egg-pot-loft-collection-espresso-black"
+      },
+      {
+       "id": "light-grey",
+       "name": "Light Grey",
+       "hex": "#8b8c87",
+       "img": "assets/pots/loft/grand-egg-pot/light-grey.webp",
+       "w": 839,
+       "h": 552,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-egg-pot-loft-collection-light-grey"
+      }
+     ]
+    },
+    {
+     "id": "low-cylinder",
+     "name": "Low Cylinder",
+     "colours": [
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#77736e",
+       "img": "assets/pots/loft/low-cylinder/concrete-grey.webp",
+       "w": 752,
+       "h": 585,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cylinder-loft-collection-concrete-grey"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#5c6065",
+       "img": "assets/pots/loft/low-cylinder/lead-grey.webp",
+       "w": 752,
+       "h": 582,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cylinder-loft-collection-lead-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#64534b",
+       "img": "assets/pots/loft/low-cylinder/rust-brown.webp",
+       "w": 751,
+       "h": 585,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cylinder-loft-collection-rust-brown"
+      }
+     ]
+    },
+    {
+     "id": "grand-bowl",
+     "name": "Grand Bowl",
+     "colours": [
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#625f5a",
+       "img": "assets/pots/loft/grand-bowl/concrete-grey.webp",
+       "w": 836,
+       "h": 572,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#5a4945",
+       "img": "assets/pots/loft/grand-bowl/rust-brown.webp",
+       "w": 837,
+       "h": 578,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-loft-collection-rust-brown"
+      },
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#a8a8a3",
+       "img": "assets/pots/loft/grand-bowl/off-white.webp",
+       "w": 836,
+       "h": 570,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-loft-collection-off-white"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#545559",
+       "img": "assets/pots/loft/grand-bowl/lead-grey.webp",
+       "w": 833,
+       "h": 572,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-loft-collection-lead-grey"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#444041",
+       "img": "assets/pots/loft/grand-bowl/espresso-black.webp",
+       "w": 837,
+       "h": 573,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-loft-collection-espresso-black"
+      }
+     ]
+    },
+    {
+     "id": "semi-high-balloon",
+     "name": "Semi High Balloon",
+     "colours": [
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#84807d",
+       "img": "assets/pots/loft/semi-high-balloon/concrete-grey.webp",
+       "w": 751,
+       "h": 667,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-semi-high-balloon-loft-collection-concrete-grey"
+      }
+     ]
+    },
+    {
+     "id": "grand-u-pot",
+     "name": "Grand U Pot",
+     "colours": [
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#696660",
+       "img": "assets/pots/loft/grand-u-pot/concrete-grey.webp",
+       "w": 838,
+       "h": 554,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-u-pot-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#5a4641",
+       "img": "assets/pots/loft/grand-u-pot/rust-brown.webp",
+       "w": 837,
+       "h": 555,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-u-pot-loft-collection-rust-brown"
+      },
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#c2c0bb",
+       "img": "assets/pots/loft/grand-u-pot/off-white.webp",
+       "w": 836,
+       "h": 549,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-u-pot-loft-collection-off-white"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#454142",
+       "img": "assets/pots/loft/grand-u-pot/espresso-black.webp",
+       "w": 836,
+       "h": 556,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-u-pot-loft-collection-espresso-black"
+      }
+     ]
+    },
+    {
+     "id": "u-pot",
+     "name": "U Pot",
+     "colours": [
+      {
+       "id": "concrete-grey",
+       "name": "Concrete Grey",
+       "hex": "#726f69",
+       "img": "assets/pots/loft/u-pot/concrete-grey.webp",
+       "w": 751,
+       "h": 640,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-loft-collection-concrete-grey"
+      },
+      {
+       "id": "rust-brown",
+       "name": "Rust Brown",
+       "hex": "#5b4b45",
+       "img": "assets/pots/loft/u-pot/rust-brown.webp",
+       "w": 747,
+       "h": 640,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-loft-collection-rust-brown"
+      },
+      {
+       "id": "off-white",
+       "name": "Off White",
+       "hex": "#bbbcb7",
+       "img": "assets/pots/loft/u-pot/off-white.webp",
+       "w": 751,
+       "h": 640,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-loft-collection-off-white"
+      },
+      {
+       "id": "espresso-black",
+       "name": "Espresso Black",
+       "hex": "#514d4e",
+       "img": "assets/pots/loft/u-pot/espresso-black.webp",
+       "w": 752,
+       "h": 643,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-loft-collection-espresso-black"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "terra",
+   "name": "Terra",
+   "url": "https://eschbach-design.com/collections/pflanzkuebel-kollektion-terra",
+   "forms": [
+    {
+     "id": "long-barrel",
+     "name": "Long Barrel",
+     "colours": [
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#bdbaae",
+       "img": "assets/pots/terra/long-barrel/champagne-white.webp",
+       "w": 337,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-barrel-terra-collection-champagne-white"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#9a8c7f",
+       "img": "assets/pots/terra/long-barrel/desert-beige.webp",
+       "w": 344,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-barrel-terra-collection-desert-beige"
+      },
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#787166",
+       "img": "assets/pots/terra/long-barrel/macchiato-grey.webp",
+       "w": 344,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-barrel-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#312f30",
+       "img": "assets/pots/terra/long-barrel/black-sand.webp",
+       "w": 345,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-barrel-terra-collection-black-sand"
+      },
+      {
+       "id": "siena-red",
+       "name": "Siena Red",
+       "hex": "#984f43",
+       "img": "assets/pots/terra/long-barrel/siena-red.webp",
+       "w": 346,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-barrel-terra-collection-siena-red"
+      }
+     ]
+    },
+    {
+     "id": "high-balloon",
+     "name": "High Balloon",
+     "colours": [
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#bcb6a9",
+       "img": "assets/pots/terra/high-balloon/champagne-white.webp",
+       "w": 752,
+       "h": 796,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-terra-collection-champagne-white"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#a1968a",
+       "img": "assets/pots/terra/high-balloon/desert-beige.webp",
+       "w": 752,
+       "h": 795,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-terra-collection-desert-beige"
+      },
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#625b50",
+       "img": "assets/pots/terra/high-balloon/macchiato-grey.webp",
+       "w": 752,
+       "h": 797,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#3d3936",
+       "img": "assets/pots/terra/high-balloon/black-sand.webp",
+       "w": 751,
+       "h": 796,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-terra-collection-black-sand"
+      },
+      {
+       "id": "siena-red",
+       "name": "Siena Red",
+       "hex": "#874f46",
+       "img": "assets/pots/terra/high-balloon/siena-red.webp",
+       "w": 751,
+       "h": 795,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-terra-collection-siena-red"
+      }
+     ]
+    },
+    {
+     "id": "new-egg-pot",
+     "name": "New Egg Pot",
+     "colours": [
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#b9b3a6",
+       "img": "assets/pots/terra/new-egg-pot/champagne-white.webp",
+       "w": 751,
+       "h": 684,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-terra-collection-champagne-white"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#988a7e",
+       "img": "assets/pots/terra/new-egg-pot/desert-beige.webp",
+       "w": 753,
+       "h": 681,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-terra-collection-desert-beige"
+      },
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#6e675c",
+       "img": "assets/pots/terra/new-egg-pot/macchiato-grey.webp",
+       "w": 751,
+       "h": 682,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#3d3937",
+       "img": "assets/pots/terra/new-egg-pot/black-sand.webp",
+       "w": 752,
+       "h": 683,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-terra-collection-black-sand"
+      },
+      {
+       "id": "siena-red",
+       "name": "Siena Red",
+       "hex": "#894e46",
+       "img": "assets/pots/terra/new-egg-pot/siena-red.webp",
+       "w": 753,
+       "h": 681,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-terra-collection-siena-red"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#5b5e64",
+       "img": "assets/pots/terra/new-egg-pot/lead-grey.webp",
+       "w": 752,
+       "h": 686,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-terra-collection-lead-grey"
+      }
+     ]
+    },
+    {
+     "id": "cube",
+     "name": "Cube",
+     "colours": [
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#777064",
+       "img": "assets/pots/terra/cube/macchiato-grey.webp",
+       "w": 752,
+       "h": 692,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#6f7378",
+       "img": "assets/pots/terra/cube/lead-grey.webp",
+       "w": 752,
+       "h": 692,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-terra-collection-lead-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#3c3835",
+       "img": "assets/pots/terra/cube/black-sand.webp",
+       "w": 753,
+       "h": 692,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-terra-collection-black-sand"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#b9aa9a",
+       "img": "assets/pots/terra/cube/desert-beige.webp",
+       "w": 752,
+       "h": 691,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-terra-collection-desert-beige"
+      },
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#cbc5b7",
+       "img": "assets/pots/terra/cube/champagne-white.webp",
+       "w": 753,
+       "h": 690,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-terra-collection-champagne-white"
+      }
+     ]
+    },
+    {
+     "id": "box",
+     "name": "Box",
+     "colours": [
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#70695e",
+       "img": "assets/pots/terra/box/macchiato-grey.webp",
+       "w": 837,
+       "h": 475,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#61656c",
+       "img": "assets/pots/terra/box/lead-grey.webp",
+       "w": 838,
+       "h": 475,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-terra-collection-lead-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#3c3836",
+       "img": "assets/pots/terra/box/black-sand.webp",
+       "w": 837,
+       "h": 473,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-terra-collection-black-sand"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#b0a294",
+       "img": "assets/pots/terra/box/desert-beige.webp",
+       "w": 837,
+       "h": 473,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-terra-collection-desert-beige"
+      },
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#ccc8ba",
+       "img": "assets/pots/terra/box/champagne-white.webp",
+       "w": 837,
+       "h": 473,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-terra-collection-champagne-white"
+      }
+     ]
+    },
+    {
+     "id": "balloon",
+     "name": "Balloon",
+     "colours": [
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#6f685d",
+       "img": "assets/pots/terra/balloon/macchiato-grey.webp",
+       "w": 751,
+       "h": 537,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#3c3835",
+       "img": "assets/pots/terra/balloon/black-sand.webp",
+       "w": 751,
+       "h": 539,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-terra-collection-black-sand"
+      },
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#b8b3a8",
+       "img": "assets/pots/terra/balloon/champagne-white.webp",
+       "w": 752,
+       "h": 537,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-terra-collection-champagne-white"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#9e9488",
+       "img": "assets/pots/terra/balloon/desert-beige.webp",
+       "w": 751,
+       "h": 540,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-terra-collection-desert-beige"
+      },
+      {
+       "id": "siena-red",
+       "name": "Siena Red",
+       "hex": "#894e45",
+       "img": "assets/pots/terra/balloon/siena-red.webp",
+       "w": 753,
+       "h": 539,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-terra-collection-siena-red"
+      }
+     ]
+    },
+    {
+     "id": "long-balloon",
+     "name": "Long Balloon",
+     "colours": [
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#776d61",
+       "img": "assets/pots/terra/long-balloon/macchiato-grey.webp",
+       "w": 369,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#575a61",
+       "img": "assets/pots/terra/long-balloon/lead-grey.webp",
+       "w": 370,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-terra-collection-lead-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#403c3a",
+       "img": "assets/pots/terra/long-balloon/black-sand.webp",
+       "w": 367,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-terra-collection-black-sand"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#847a6f",
+       "img": "assets/pots/terra/long-balloon/desert-beige.webp",
+       "w": 536,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-terra-collection-desert-beige"
+      },
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#b1aca0",
+       "img": "assets/pots/terra/long-balloon/champagne-white.webp",
+       "w": 533,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-terra-collection-champagne-white"
+      }
+     ]
+    },
+    {
+     "id": "vase",
+     "name": "Vase",
+     "colours": [
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#726a60",
+       "img": "assets/pots/terra/vase/macchiato-grey.webp",
+       "w": 754,
+       "h": 800,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-vase-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "lead-grey",
+       "name": "Lead Grey",
+       "hex": "#60636a",
+       "img": "assets/pots/terra/vase/lead-grey.webp",
+       "w": 750,
+       "h": 799,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-vase-terra-collection-lead-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#3c3835",
+       "img": "assets/pots/terra/vase/black-sand.webp",
+       "w": 751,
+       "h": 800,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-vase-terra-collection-black-sand"
+      }
+     ]
+    },
+    {
+     "id": "tall-egg-pot",
+     "name": "Tall Egg Pot",
+     "colours": [
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#373333",
+       "img": "assets/pots/terra/tall-egg-pot/black-sand.webp",
+       "w": 725,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-terra-collection-black-sand"
+      },
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#b1aea4",
+       "img": "assets/pots/terra/tall-egg-pot/champagne-white.webp",
+       "w": 725,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-terra-collection-champagne-white"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#9b9186",
+       "img": "assets/pots/terra/tall-egg-pot/desert-beige.webp",
+       "w": 724,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-terra-collection-desert-beige"
+      },
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#6f675d",
+       "img": "assets/pots/terra/tall-egg-pot/macchiato-grey.webp",
+       "w": 726,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "siena-red",
+       "name": "Siena Red",
+       "hex": "#91554b",
+       "img": "assets/pots/terra/tall-egg-pot/siena-red.webp",
+       "w": 725,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-terra-collection-siena-red"
+      }
+     ]
+    },
+    {
+     "id": "grand-bowl",
+     "name": "Grand Bowl",
+     "colours": [
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#6a6259",
+       "img": "assets/pots/terra/grand-bowl/macchiato-grey.webp",
+       "w": 835,
+       "h": 569,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#332f2c",
+       "img": "assets/pots/terra/grand-bowl/black-sand.webp",
+       "w": 833,
+       "h": 564,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-terra-collection-black-sand"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#91857b",
+       "img": "assets/pots/terra/grand-bowl/desert-beige.webp",
+       "w": 834,
+       "h": 565,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-terra-collection-desert-beige"
+      },
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#a19d93",
+       "img": "assets/pots/terra/grand-bowl/champagne-white.webp",
+       "w": 835,
+       "h": 569,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-terra-collection-champagne-white"
+      },
+      {
+       "id": "siena-red",
+       "name": "Siena Red",
+       "hex": "#7c433a",
+       "img": "assets/pots/terra/grand-bowl/siena-red.webp",
+       "w": 838,
+       "h": 572,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-terra-collection-siena-red"
+      }
+     ]
+    },
+    {
+     "id": "u-pot",
+     "name": "U Pot",
+     "colours": [
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#adaa9f",
+       "img": "assets/pots/terra/u-pot/champagne-white.webp",
+       "w": 751,
+       "h": 641,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-terra-collection-champagne-white"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#9d9388",
+       "img": "assets/pots/terra/u-pot/desert-beige.webp",
+       "w": 753,
+       "h": 641,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-terra-collection-desert-beige"
+      },
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#6a6258",
+       "img": "assets/pots/terra/u-pot/macchiato-grey.webp",
+       "w": 753,
+       "h": 639,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#403c3d",
+       "img": "assets/pots/terra/u-pot/black-sand.webp",
+       "w": 751,
+       "h": 641,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-terra-collection-black-sand"
+      }
+     ]
+    },
+    {
+     "id": "tall-classic-vase",
+     "name": "Tall Classic Vase",
+     "colours": [
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#b2aca0",
+       "img": "assets/pots/terra/tall-classic-vase/champagne-white.webp",
+       "w": 731,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-classic-vase-terra-collection-champagne-white"
+      },
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#90857b",
+       "img": "assets/pots/terra/tall-classic-vase/desert-beige.webp",
+       "w": 731,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-classic-vase-terra-collection-desert-beige"
+      },
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#655d52",
+       "img": "assets/pots/terra/tall-classic-vase/macchiato-grey.webp",
+       "w": 733,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-classic-vase-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#45413f",
+       "img": "assets/pots/terra/tall-classic-vase/black-sand.webp",
+       "w": 731,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-classic-vase-terra-collection-black-sand"
+      }
+     ]
+    },
+    {
+     "id": "asymmetric-vase",
+     "name": "Asymmetric Vase",
+     "colours": [
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#8d8175",
+       "img": "assets/pots/terra/asymmetric-vase/desert-beige.webp",
+       "w": 366,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-asymmetric-vase-terra-collection-desert-beige"
+      },
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#787166",
+       "img": "assets/pots/terra/asymmetric-vase/macchiato-grey.webp",
+       "w": 363,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-asymmetric-vase-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#4c4846",
+       "img": "assets/pots/terra/asymmetric-vase/black-sand.webp",
+       "w": 363,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-asymmetric-vase-terra-collection-black-sand"
+      }
+     ]
+    },
+    {
+     "id": "tall-balloon",
+     "name": "Tall Balloon",
+     "colours": [
+      {
+       "id": "siena-red",
+       "name": "Siena Red",
+       "hex": "#7d443b",
+       "img": "assets/pots/terra/tall-balloon/siena-red.webp",
+       "w": 690,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-balloon-terra-collection-siena-red"
+      }
+     ]
+    },
+    {
+     "id": "high-barrel",
+     "name": "High Barrel",
+     "colours": [
+      {
+       "id": "desert-beige",
+       "name": "Desert Beige",
+       "hex": "#a39588",
+       "img": "assets/pots/terra/high-barrel/desert-beige.webp",
+       "w": 752,
+       "h": 797,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-barrel-terra-collection-desert-beige"
+      },
+      {
+       "id": "macchiato-grey",
+       "name": "Macchiato Grey",
+       "hex": "#736b62",
+       "img": "assets/pots/terra/high-barrel/macchiato-grey.webp",
+       "w": 752,
+       "h": 797,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-barrel-terra-collection-macchiato-grey"
+      },
+      {
+       "id": "black-sand",
+       "name": "Black Sand",
+       "hex": "#4b4748",
+       "img": "assets/pots/terra/high-barrel/black-sand.webp",
+       "w": 752,
+       "h": 798,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-barrel-terra-collection-black-sand"
+      },
+      {
+       "id": "champagne-white",
+       "name": "Champagne White",
+       "hex": "#bdb7ab",
+       "img": "assets/pots/terra/high-barrel/champagne-white.webp",
+       "w": 722,
+       "h": 767,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-barrel-terra-collection-champagne-white"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "antique-stone",
+   "name": "Antique Stone",
+   "url": "https://eschbach-design.com/collections/antique-collection",
+   "forms": [
+    {
+     "id": "new-egg-pot",
+     "name": "New Egg Pot",
+     "colours": [
+      {
+       "id": "antique-brown",
+       "name": "Antique Brown",
+       "hex": "#4b4744",
+       "img": "assets/pots/antique-stone/new-egg-pot/antique-brown.webp",
+       "w": 752,
+       "h": 683,
+       "url": "https://eschbach-design.com/products/new-egg-pot-antique-stone-collection-antique-brown"
+      },
+      {
+       "id": "bronze",
+       "name": "Bronze",
+       "hex": "#675f59",
+       "img": "assets/pots/antique-stone/new-egg-pot/bronze.webp",
+       "w": 750,
+       "h": 681,
+       "url": "https://eschbach-design.com/products/new-egg-pot-antique-stone-collection-bronze"
+      },
+      {
+       "id": "copper-green",
+       "name": "Copper Green",
+       "hex": "#6b706a",
+       "img": "assets/pots/antique-stone/new-egg-pot/copper-green.webp",
+       "w": 751,
+       "h": 682,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-antique-stone-collection-copper-green"
+      }
+     ]
+    },
+    {
+     "id": "bowl",
+     "name": "Bowl",
+     "colours": [
+      {
+       "id": "antique-brown",
+       "name": "Antique Brown",
+       "hex": "#64605d",
+       "img": "assets/pots/antique-stone/bowl/antique-brown.webp",
+       "w": 749,
+       "h": 670,
+       "url": "https://eschbach-design.com/products/bowl-antique-stone-collection-antique-brown"
+      },
+      {
+       "id": "bronze",
+       "name": "Bronze",
+       "hex": "#5a514a",
+       "img": "assets/pots/antique-stone/bowl/bronze.webp",
+       "w": 750,
+       "h": 678,
+       "url": "https://eschbach-design.com/products/bowl-antique-stone-collection-bronze"
+      },
+      {
+       "id": "copper-green",
+       "name": "Copper Green",
+       "hex": "#727872",
+       "img": "assets/pots/antique-stone/bowl/copper-green.webp",
+       "w": 750,
+       "h": 680,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-bowl-antique-stone-collection-copper-green"
+      }
+     ]
+    },
+    {
+     "id": "grand-bowl",
+     "name": "Grand Bowl",
+     "colours": [
+      {
+       "id": "bronze",
+       "name": "Bronze",
+       "hex": "#4a423c",
+       "img": "assets/pots/antique-stone/grand-bowl/bronze.webp",
+       "w": 838,
+       "h": 578,
+       "url": "https://eschbach-design.com/products/grand-bowl-antique-stone-collection-bronze"
+      },
+      {
+       "id": "antique-brown",
+       "name": "Antique Brown",
+       "hex": "#504d4b",
+       "img": "assets/pots/antique-stone/grand-bowl/antique-brown.webp",
+       "w": 837,
+       "h": 577,
+       "url": "https://eschbach-design.com/products/grand-bowl-antique-stone-collection-antique-brown"
+      },
+      {
+       "id": "copper-green",
+       "name": "Copper Green",
+       "hex": "#666862",
+       "img": "assets/pots/antique-stone/grand-bowl/copper-green.webp",
+       "w": 836,
+       "h": 573,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-antique-stone-collection-copper-green"
+      }
+     ]
+    },
+    {
+     "id": "high-jar",
+     "name": "High Jar",
+     "colours": [
+      {
+       "id": "antique-brown",
+       "name": "Antique Brown",
+       "hex": "#3e3938",
+       "img": "assets/pots/antique-stone/high-jar/antique-brown.webp",
+       "w": 749,
+       "h": 786,
+       "url": "https://eschbach-design.com/products/high-jar-antique-stone-collection-antique-brown"
+      },
+      {
+       "id": "bronze",
+       "name": "Bronze",
+       "hex": "#5a524c",
+       "img": "assets/pots/antique-stone/high-jar/bronze.webp",
+       "w": 752,
+       "h": 791,
+       "url": "https://eschbach-design.com/products/high-jar-antique-stone-collection-bronze"
+      },
+      {
+       "id": "copper-green",
+       "name": "Copper Green",
+       "hex": "#6c716c",
+       "img": "assets/pots/antique-stone/high-jar/copper-green.webp",
+       "w": 749,
+       "h": 783,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-jar-antique-stone-collection-copper-green"
+      }
+     ]
+    },
+    {
+     "id": "long-jar",
+     "name": "Long Jar",
+     "colours": [
+      {
+       "id": "antique-brown",
+       "name": "Antique Brown",
+       "hex": "#504c48",
+       "img": "assets/pots/antique-stone/long-jar/antique-brown.webp",
+       "w": 434,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/long-jar-antique-stone-collection-antique-brown"
+      },
+      {
+       "id": "bronze",
+       "name": "Bronze",
+       "hex": "#4a433c",
+       "img": "assets/pots/antique-stone/long-jar/bronze.webp",
+       "w": 436,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/long-jar-antique-stone-collection-bronze"
+      },
+      {
+       "id": "copper-green",
+       "name": "Copper Green",
+       "hex": "#6a706b",
+       "img": "assets/pots/antique-stone/long-jar/copper-green.webp",
+       "w": 433,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-jar-antique-stone-collection-copper-green"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lava",
+   "name": "Lava",
+   "url": "https://eschbach-design.com/collections/pflanzkuebel-kollektion-lava",
+   "forms": [
+    {
+     "id": "u-pot",
+     "name": "U Pot",
+     "colours": [
+      {
+       "id": "volcanic-black",
+       "name": "Volcanic Black",
+       "hex": "#464647",
+       "img": "assets/pots/lava/u-pot/volcanic-black.webp",
+       "w": 754,
+       "h": 677,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-lava-collection-volcanic-black"
+      },
+      {
+       "id": "antique-white",
+       "name": "Antique White",
+       "hex": "#c0bfb7",
+       "img": "assets/pots/lava/u-pot/antique-white.webp",
+       "w": 752,
+       "h": 679,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-lava-collection-antique-white"
+      }
+     ]
+    },
+    {
+     "id": "long-balloon",
+     "name": "Long Balloon",
+     "colours": [
+      {
+       "id": "volcanic-black",
+       "name": "Volcanic Black",
+       "hex": "#49494b",
+       "img": "assets/pots/lava/long-balloon/volcanic-black.webp",
+       "w": 457,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-lava-collection-volcanic-black"
+      },
+      {
+       "id": "antique-white",
+       "name": "Antique White",
+       "hex": "#aeaca5",
+       "img": "assets/pots/lava/long-balloon/antique-white.webp",
+       "w": 455,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-lava-collection-antique-white"
+      }
+     ]
+    },
+    {
+     "id": "tall-vase",
+     "name": "Tall Vase",
+     "colours": [
+      {
+       "id": "volcanic-black",
+       "name": "Volcanic Black",
+       "hex": "#4a4a4e",
+       "img": "assets/pots/lava/tall-vase/volcanic-black.webp",
+       "w": 676,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-vase-lava-collection-volcanic-black"
+      }
+     ]
+    },
+    {
+     "id": "low-u-pot",
+     "name": "Low U Pot",
+     "colours": [
+      {
+       "id": "volcanic-black",
+       "name": "Volcanic Black",
+       "hex": "#464648",
+       "img": "assets/pots/lava/low-u-pot/volcanic-black.webp",
+       "w": 752,
+       "h": 546,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-u-pot-lava-collection-volcanic-black"
+      }
+     ]
+    },
+    {
+     "id": "high-u-pot",
+     "name": "High U Pot",
+     "colours": [
+      {
+       "id": "volcanic-black",
+       "name": "Volcanic Black",
+       "hex": "#49484d",
+       "img": "assets/pots/lava/high-u-pot/volcanic-black.webp",
+       "w": 752,
+       "h": 826,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-u-pot-lava-collection-volcanic-black"
+      }
+     ]
+    },
+    {
+     "id": "grand-bowl",
+     "name": "Grand Bowl",
+     "colours": [
+      {
+       "id": "volcanic-black",
+       "name": "Volcanic Black",
+       "hex": "#39393b",
+       "img": "assets/pots/lava/grand-bowl/volcanic-black.webp",
+       "w": 837,
+       "h": 574,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-grand-bowl-lava-collection-volcanic-black"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pure",
+   "name": "Pure",
+   "url": "https://eschbach-design.com/collections/pflanzkuebel-kollektion-pure",
+   "forms": [
+    {
+     "id": "cube",
+     "name": "Cube",
+     "colours": [
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#ededed",
+       "img": "assets/pots/pure/cube/santorin-white.webp",
+       "w": 752,
+       "h": 683,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-pure-collection-santorin-white"
+      },
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#494850",
+       "img": "assets/pots/pure/cube/onyx-black.webp",
+       "w": 753,
+       "h": 692,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-pure-collection-onyx-black"
+      }
+     ]
+    },
+    {
+     "id": "box",
+     "name": "Box",
+     "colours": [
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#ececec",
+       "img": "assets/pots/pure/box/santorin-white.webp",
+       "w": 836,
+       "h": 468,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-pure-collection-santorin-white"
+      },
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#414046",
+       "img": "assets/pots/pure/box/onyx-black.webp",
+       "w": 836,
+       "h": 473,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-pure-collection-onyx-black"
+      }
+     ]
+    },
+    {
+     "id": "high-cube",
+     "name": "High Cube",
+     "colours": [
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#4c4e55",
+       "img": "assets/pots/pure/high-cube/onyx-black.webp",
+       "w": 529,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-cube-pure-collection-onyx-black"
+      },
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#f2f2f2",
+       "img": "assets/pots/pure/high-cube/santorin-white.webp",
+       "w": 535,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-cube-pure-collection-santorin-white"
+      }
+     ]
+    },
+    {
+     "id": "high-box",
+     "name": "High Box",
+     "colours": [
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#454449",
+       "img": "assets/pots/pure/high-box/onyx-black.webp",
+       "w": 745,
+       "h": 885,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-box-pure-collection-onyx-black"
+      },
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#e8e8e8",
+       "img": "assets/pots/pure/high-box/santorin-white.webp",
+       "w": 715,
+       "h": 845,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-box-pure-collection-santorin-white"
+      }
+     ]
+    },
+    {
+     "id": "new-egg-pot",
+     "name": "New Egg Pot",
+     "colours": [
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#414046",
+       "img": "assets/pots/pure/new-egg-pot/onyx-black.webp",
+       "w": 752,
+       "h": 687,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-pure-collection-onyx-black"
+      },
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#dbdbdb",
+       "img": "assets/pots/pure/new-egg-pot/santorin-white.webp",
+       "w": 751,
+       "h": 684,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-pure-collection-santorin-white"
+      }
+     ]
+    },
+    {
+     "id": "low-egg-pot",
+     "name": "Low Egg Pot",
+     "colours": [
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#cacaca",
+       "img": "assets/pots/pure/low-egg-pot/santorin-white.webp",
+       "w": 752,
+       "h": 436,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-egg-pot-pure-collection-santorin-white"
+      },
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#3c3b40",
+       "img": "assets/pots/pure/low-egg-pot/onyx-black.webp",
+       "w": 751,
+       "h": 445,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-egg-pot-pure-collection-onyx-black"
+      }
+     ]
+    },
+    {
+     "id": "tall-egg-pot",
+     "name": "Tall Egg Pot",
+     "colours": [
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#dbdbdb",
+       "img": "assets/pots/pure/tall-egg-pot/santorin-white.webp",
+       "w": 729,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-pure-collection-santorin-white"
+      },
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#3f3e43",
+       "img": "assets/pots/pure/tall-egg-pot/onyx-black.webp",
+       "w": 724,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-pure-collection-onyx-black"
+      }
+     ]
+    },
+    {
+     "id": "low-balloon",
+     "name": "Low Balloon",
+     "colours": [
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#dddddd",
+       "img": "assets/pots/pure/low-balloon/santorin-white.webp",
+       "w": 752,
+       "h": 401,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-balloon-pure-collection-santorin-white"
+      },
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#38373c",
+       "img": "assets/pots/pure/low-balloon/onyx-black.webp",
+       "w": 754,
+       "h": 401,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-balloon-pure-collection-onyx-black"
+      }
+     ]
+    },
+    {
+     "id": "low-cylinder",
+     "name": "Low Cylinder",
+     "colours": [
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#d9d9d7",
+       "img": "assets/pots/pure/low-cylinder/santorin-white.webp",
+       "w": 753,
+       "h": 579,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cylinder-pure-collection-santorin-white"
+      },
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#424146",
+       "img": "assets/pots/pure/low-cylinder/onyx-black.webp",
+       "w": 752,
+       "h": 580,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-cylinder-pure-collection-onyx-black"
+      }
+     ]
+    },
+    {
+     "id": "balloon",
+     "name": "Balloon",
+     "colours": [
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#3c3b42",
+       "img": "assets/pots/pure/balloon/onyx-black.webp",
+       "w": 752,
+       "h": 545,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-pure-collection-onyx-black"
+      },
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#d5d5d5",
+       "img": "assets/pots/pure/balloon/santorin-white.webp",
+       "w": 751,
+       "h": 533,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-pure-collection-santorin-white"
+      }
+     ]
+    },
+    {
+     "id": "high-balloon",
+     "name": "High Balloon",
+     "colours": [
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#444348",
+       "img": "assets/pots/pure/high-balloon/onyx-black.webp",
+       "w": 753,
+       "h": 798,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-pure-collection-onyx-black"
+      },
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#dfdfdf",
+       "img": "assets/pots/pure/high-balloon/santorin-white.webp",
+       "w": 752,
+       "h": 795,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-balloon-pure-collection-santorin-white"
+      }
+     ]
+    },
+    {
+     "id": "high-conus",
+     "name": "High Conus",
+     "colours": [
+      {
+       "id": "onyx-black",
+       "name": "Onyx Black",
+       "hex": "#403f44",
+       "img": "assets/pots/pure/high-conus/onyx-black.webp",
+       "w": 455,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-conus-pure-collection-onyx-black"
+      },
+      {
+       "id": "santorin-white",
+       "name": "Santorin White",
+       "hex": "#dadada",
+       "img": "assets/pots/pure/high-conus/santorin-white.webp",
+       "w": 458,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-conus-pure-collection-santorin-white"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "granite",
+   "name": "Granite",
+   "url": "https://eschbach-design.com/collections/granite",
+   "forms": [
+    {
+     "id": "cube",
+     "name": "Cube",
+     "colours": [
+      {
+       "id": "granite-grey",
+       "name": "Granite Grey",
+       "hex": "#bcb9b2",
+       "img": "assets/pots/granite/cube/granite-grey.webp",
+       "w": 752,
+       "h": 692,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-granite-collection-granite-grey"
+      }
+     ]
+    },
+    {
+     "id": "box",
+     "name": "Box",
+     "colours": [
+      {
+       "id": "granite-grey",
+       "name": "Granite Grey",
+       "hex": "#b6b2af",
+       "img": "assets/pots/granite/box/granite-grey.webp",
+       "w": 837,
+       "h": 474,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-box-granite-collection-granite-grey"
+      }
+     ]
+    },
+    {
+     "id": "new-egg-pot",
+     "name": "New Egg Pot",
+     "colours": [
+      {
+       "id": "granite-grey",
+       "name": "Granite Grey",
+       "hex": "#a09d97",
+       "img": "assets/pots/granite/new-egg-pot/granite-grey.webp",
+       "w": 751,
+       "h": 684,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-new-egg-pot-granite-collection-granite-grey"
+      }
+     ]
+    },
+    {
+     "id": "tall-egg-pot",
+     "name": "Tall Egg Pot",
+     "colours": [
+      {
+       "id": "granite-grey",
+       "name": "Granite Grey",
+       "hex": "#999692",
+       "img": "assets/pots/granite/tall-egg-pot/granite-grey.webp",
+       "w": 722,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-granite-collection-granite-grey"
+      }
+     ]
+    },
+    {
+     "id": "balloon",
+     "name": "Balloon",
+     "colours": [
+      {
+       "id": "granite-grey",
+       "name": "Granite Grey",
+       "hex": "#9e9b96",
+       "img": "assets/pots/granite/balloon/granite-grey.webp",
+       "w": 751,
+       "h": 542,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-balloon-granite-collection-granite-grey"
+      }
+     ]
+    },
+    {
+     "id": "low-balloon",
+     "name": "Low Balloon",
+     "colours": [
+      {
+       "id": "granite-grey",
+       "name": "Granite Grey",
+       "hex": "#9d9a94",
+       "img": "assets/pots/granite/low-balloon/granite-grey.webp",
+       "w": 751,
+       "h": 414,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-balloon-granite-collection-granite-grey"
+      }
+     ]
+    },
+    {
+     "id": "tall-balloon",
+     "name": "Tall Balloon",
+     "colours": [
+      {
+       "id": "granite-grey",
+       "name": "Granite Grey",
+       "hex": "#9d9995",
+       "img": "assets/pots/granite/tall-balloon/granite-grey.webp",
+       "w": 683,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-balloon-granite-collection-granite-grey"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vertical-lines",
+   "name": "Vertical Lines",
+   "url": "https://eschbach-design.com/collections/kollektion-vertical-stripes",
+   "forms": [
+    {
+     "id": "cube",
+     "name": "Cube",
+     "colours": [
+      {
+       "id": "vertical-white",
+       "name": "Vertical White",
+       "hex": "#e4e4e4",
+       "img": "assets/pots/vertical-lines/cube/vertical-white.webp",
+       "w": 753,
+       "h": 684,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cube-vertical-lines-collection-vertical-white"
+      }
+     ]
+    },
+    {
+     "id": "classic-egg-pot",
+     "name": "Classic Egg Pot",
+     "colours": [
+      {
+       "id": "vertical-white",
+       "name": "Vertical White",
+       "hex": "#c3c3c2",
+       "img": "assets/pots/vertical-lines/classic-egg-pot/vertical-white.webp",
+       "w": 751,
+       "h": 724,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-classic-egg-pot-vertical-lines-collection-vertical-white"
+      }
+     ]
+    },
+    {
+     "id": "low-egg-pot",
+     "name": "Low Egg Pot",
+     "colours": [
+      {
+       "id": "vertical-white",
+       "name": "Vertical White",
+       "hex": "#b3b2b2",
+       "img": "assets/pots/vertical-lines/low-egg-pot/vertical-white.webp",
+       "w": 749,
+       "h": 441,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-low-egg-pot-vertical-lines-collection-vertical-white"
+      }
+     ]
+    },
+    {
+     "id": "tall-egg-pot",
+     "name": "Tall Egg Pot",
+     "colours": [
+      {
+       "id": "vertical-white",
+       "name": "Vertical White",
+       "hex": "#bdbbba",
+       "img": "assets/pots/vertical-lines/tall-egg-pot/vertical-white.webp",
+       "w": 730,
+       "h": 900,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-tall-egg-pot-vertical-lines-collection-vertical-white"
+      }
+     ]
+    },
+    {
+     "id": "high-cylinder",
+     "name": "High Cylinder",
+     "colours": [
+      {
+       "id": "vertical-white",
+       "name": "Vertical White",
+       "hex": "#d3d3d3",
+       "img": "assets/pots/vertical-lines/high-cylinder/vertical-white.webp",
+       "w": 752,
+       "h": 831,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-high-cylinder-vertical-lines-collection-vertical-white"
+      }
+     ]
+    },
+    {
+     "id": "high-lotus",
+     "name": "High Lotus",
+     "colours": [
+      {
+       "id": "vertical-white",
+       "name": "Vertical White",
+       "hex": "#cfcfcf",
+       "img": "assets/pots/vertical-lines/high-lotus/vertical-white.webp",
+       "w": 751,
+       "h": 810,
+       "url": "https://eschbach-design.com/products/high-lotus-vertical-lines-collection-vertical-white"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heritage",
+   "name": "Heritage",
+   "url": "https://eschbach-design.com/collections/pflanzkuebel-kollektion-heritage",
+   "forms": [
+    {
+     "id": "cumberland",
+     "name": "Cumberland",
+     "colours": [
+      {
+       "id": "classic-lead",
+       "name": "Classic Lead",
+       "hex": "#747a80",
+       "img": "assets/pots/heritage/cumberland/classic-lead.webp",
+       "w": 752,
+       "h": 691,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-cumberland-empire-collection-classic-lead"
+      }
+     ]
+    },
+    {
+     "id": "portsmouth",
+     "name": "Portsmouth",
+     "colours": [
+      {
+       "id": "classic-lead",
+       "name": "Classic Lead",
+       "hex": "#82878e",
+       "img": "assets/pots/heritage/portsmouth/classic-lead.webp",
+       "w": 749,
+       "h": 717,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-portsmouth-empire-collection-classic-lead"
+      }
+     ]
+    },
+    {
+     "id": "hampshire",
+     "name": "Hampshire",
+     "colours": [
+      {
+       "id": "classic-lead",
+       "name": "Classic Lead",
+       "hex": "#7c8187",
+       "img": "assets/pots/heritage/hampshire/classic-lead.webp",
+       "w": 838,
+       "h": 442,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-hampshire-empire-collection-classic-lead"
+      }
+     ]
+    },
+    {
+     "id": "sandhurst",
+     "name": "Sandhurst",
+     "colours": [
+      {
+       "id": "classic-lead",
+       "name": "Classic Lead",
+       "hex": "#7b828a",
+       "img": "assets/pots/heritage/sandhurst/classic-lead.webp",
+       "w": 753,
+       "h": 691,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-sandhurst-empire-collection-classic-lead"
+      }
+     ]
+    },
+    {
+     "id": "denbigh",
+     "name": "Denbigh",
+     "colours": [
+      {
+       "id": "classic-lead",
+       "name": "Classic Lead",
+       "hex": "#7e858b",
+       "img": "assets/pots/heritage/denbigh/classic-lead.webp",
+       "w": 835,
+       "h": 479,
+       "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-denbigh-empire-collection-classic-lead"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

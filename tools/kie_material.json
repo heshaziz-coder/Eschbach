@@ -1,0 +1,57 @@
+[
+ {
+  "id": "mat_loft",
+  "aspect_ratio": "16:9",
+  "resolution": "4K",
+  "image_files": [
+   ".tmp/material/ref_loft.jpg",
+   ".tmp/material/crop_loft.jpg"
+  ],
+  "prompt": "Seamless flat material texture scan of an ESCHBACH planter surface - Concrete Grey cast-concrete look: smooth fine concrete in medium grey, sprinkled with tiny dark and light mineral specks and a few minute pinholes, soft cloudy tonal variation, matte, very low relief. The FIRST attached image shows the real product, the SECOND an enlarged detail of its real surface: reproduce exactly this material - same colour, tone variation, kind, size and density of pores, grains, grooves or patina. Capture it like a professional material-library / photogrammetry scan of a perfectly FLAT panel: camera exactly perpendicular to the surface, orthographic view, about 25 cm of surface across the frame, everything tack sharp from edge to edge and corner to corner (no depth of field, no bokeh, no blur anywhere), perfectly even illumination over the whole frame with a gentle low-angle light from the upper left that reveals the relief equally everywhere, no curvature, no bulge, no vignetting, no light falloff, no gradients, no shadows of objects, no borders, no edges, no frame, no corners of the object - the texture fills 100 % of the 16:9 frame. Extremely high micro detail, natural colours true to the reference. No text, no watermark."
+ },
+ {
+  "id": "mat_terra",
+  "aspect_ratio": "16:9",
+  "resolution": "4K",
+  "image_files": [
+   ".tmp/material/ref_terra.jpg",
+   ".tmp/material/crop_terra.jpg"
+  ],
+  "prompt": "Seamless flat material texture scan of an ESCHBACH planter surface - Desert Beige sandy mineral render: warm sandy beige with a rough, horizontally combed / brushed structure - many fine, slightly irregular horizontal grooves and ridges across the surface with sandy grain in between, matte. The FIRST attached image shows the real product, the SECOND an enlarged detail of its real surface: reproduce exactly this material - same colour, tone variation, kind, size and density of pores, grains, grooves or patina. Capture it like a professional material-library / photogrammetry scan of a perfectly FLAT panel: camera exactly perpendicular to the surface, orthographic view, about 25 cm of surface across the frame, everything tack sharp from edge to edge and corner to corner (no depth of field, no bokeh, no blur anywhere), perfectly even illumination over the whole frame with a gentle low-angle light from the upper left that reveals the relief equally everywhere, no curvature, no bulge, no vignetting, no light falloff, no gradients, no shadows of objects, no borders, no edges, no frame, no corners of the object - the texture fills 100 % of the 16:9 frame. Extremely high micro detail, natural colours true to the reference. No text, no watermark."
+ },
+ {
+  "id": "mat_antique",
+  "aspect_ratio": "16:9",
+  "resolution": "4K",
+  "image_files": [
+   ".tmp/material/ref_antique.jpg",
+   ".tmp/material/crop_antique.jpg"
+  ],
+  "prompt": "Seamless flat material texture scan of an ESCHBACH planter surface - Copper Green aged patina: mottled turquoise-green and sea-green verdigris with cloudy darker bronze-brown and grey zones, fine sandy granular grain and small speckles, matte. The FIRST attached image shows the real product, the SECOND an enlarged detail of its real surface: reproduce exactly this material - same colour, tone variation, kind, size and density of pores, grains, grooves or patina. Capture it like a professional material-library / photogrammetry scan of a perfectly FLAT panel: camera exactly perpendicular to the surface, orthographic view, about 25 cm of surface across the frame, everything tack sharp from edge to edge and corner to corner (no depth of field, no bokeh, no blur anywhere), perfectly even illumination over the whole frame with a gentle low-angle light from the upper left that reveals the relief equally everywhere, no curvature, no bulge, no vignetting, no light falloff, no gradients, no shadows of objects, no borders, no edges, no frame, no corners of the object - the texture fills 100 % of the 16:9 frame. Extremely high micro detail, natural colours true to the reference. No text, no watermark."
+ },
+ {
+  "id": "mat_lava",
+  "aspect_ratio": "16:9",
+  "resolution": "4K",
+  "image_files": [
+   ".tmp/material/ref_lava.jpg",
+   ".tmp/material/crop_lava.jpg"
+  ],
+  "prompt": "Seamless flat material texture scan of an ESCHBACH planter surface - Volcanic Black lava-stone look: dark charcoal-black surface densely covered with round crater-like pores and bubbles of many sizes (2-15 mm), the pores filled and rimmed with light ash-grey, rough porous relief. The FIRST attached image shows the real product, the SECOND an enlarged detail of its real surface: reproduce exactly this material - same colour, tone variation, kind, size and density of pores, grains, grooves or patina. Capture it like a professional material-library / photogrammetry scan of a perfectly FLAT panel: camera exactly perpendicular to the surface, orthographic view, about 25 cm of surface across the frame, everything tack sharp from edge to edge and corner to corner (no depth of field, no bokeh, no blur anywhere), perfectly even illumination over the whole frame with a gentle low-angle light from the upper left that reveals the relief equally everywhere, no curvature, no bulge, no vignetting, no light falloff, no gradients, no shadows of objects, no borders, no edges, no frame, no corners of the object - the texture fills 100 % of the 16:9 frame. Extremely high micro detail, natural colours true to the reference. No text, no watermark."
+ },
+ {
+  "id": "mat_granite",
+  "aspect_ratio": "16:9",
+  "resolution": "4K",
+  "image_files": [
+   ".tmp/material/ref_granite.jpg"
+  ],
+  "prompt": "Seamless flat material texture scan of an ESCHBACH planter surface - Granite Grey stone look: light, slightly warm grey surface with a fine sandy granular texture, tiny lighter and darker grey grains and speckles, subtle tonal clouds, matte, gently rough. The attached image shows the real product (granite-grey cube planter): reproduce exactly its surface material - same colour, tone variation, kind, size and density of pores, grains, grooves or patina. Capture it like a professional material-library / photogrammetry scan of a perfectly FLAT panel: camera exactly perpendicular to the surface, orthographic view, about 25 cm of surface across the frame, everything tack sharp from edge to edge and corner to corner (no depth of field, no bokeh, no blur anywhere), perfectly even illumination over the whole frame with a gentle low-angle light from the upper left that reveals the relief equally everywhere, no curvature, no bulge, no vignetting, no light falloff, no gradients, no shadows of objects, no borders, no edges, no frame, no corners of the object - the texture fills 100 % of the 16:9 frame. Extremely high micro detail, natural colours true to the reference. No text, no watermark. One uniform, continuous surface without any patches, squares, seams or areas of different texture."
+ },
+ {
+  "id": "mat_vertical",
+  "aspect_ratio": "16:9",
+  "resolution": "4K",
+  "prompt": "Architectural material sample photograph, close-up. Subject: the white stone surface of a modern outdoor planter. The surface has a fine linear relief of straight vertical lines, evenly spaced about 5 mm apart, like a corduroy pattern carved in stone, plus a very fine sandy grain; colour warm off-white, matte. The surface fills the entire 16:9 frame, photographed straight on, about 25 cm wide, the lines running from the top edge to the bottom edge. Soft directional daylight from the left so the line relief looks three-dimensional with soft shading. Sharp, extremely detailed, photorealistic material photography. No text, no watermark, no objects."
+ }
+]

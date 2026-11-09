@@ -1,0 +1,47 @@
+{
+  "scenes": [
+    {
+      "id": "terrasse",
+      "name": "Betonterrasse",
+      "image": "assets/scenes/terrasse.jpg",
+      "thumb": "assets/scenes/terrasse_thumb.jpg"
+    },
+    {
+      "id": "innenhof",
+      "name": "Mediterraner Hof",
+      "image": "assets/scenes/innenhof.jpg",
+      "thumb": "assets/scenes/innenhof_thumb.jpg"
+    },
+    {
+      "id": "lobby",
+      "name": "Hotel-Lobby",
+      "image": "assets/scenes/lobby.jpg",
+      "thumb": "assets/scenes/lobby_thumb.jpg"
+    },
+    {
+      "id": "zen",
+      "name": "Zen-Garten",
+      "image": "assets/scenes/zen.jpg",
+      "thumb": "assets/scenes/zen_thumb.jpg"
+    },
+    {
+      "id": "dachterrasse",
+      "name": "Dachterrasse",
+      "image": "assets/scenes/dachterrasse.jpg",
+      "thumb": "assets/scenes/dachterrasse_thumb.jpg"
+    }
+  ],
+  "forms": [
+    "balloon",
+    "highballoon",
+    "egg",
+    "talleg",
+    "bowl",
+    "box"
+  ],
+  "tint": [
+    "concrete",
+    "sand",
+    "lava"
+  ]
+}
