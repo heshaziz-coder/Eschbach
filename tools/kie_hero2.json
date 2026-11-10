@@ -1,0 +1,81 @@
+[
+ {
+  "id": "water_still",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/hero/hero_wide_final.png"
+  ],
+  "prompt": "Edit this photograph. Keep absolutely everything identical, pixel for pixel: the same framing and camera, the black lava-stone planter, the olive tree and every one of its leaves, the travertine terrace, the hedge, the villa with its glass facade and curtains, the stone wall, the sofa, the sky and the warm late-afternoon light. Change ONLY the surface of the swimming pool water: instead of being mirror-flat, the water now moves very gently in a light breeze - a fine, delicate ripple of small soft wavelets across the whole pool, with subtle shimmering highlights of sunlight and slightly broken, wavering reflections of the pool edge and the wall. Clear turquoise water, same colour and brightness as before. Calm and natural, not choppy. Photorealistic, no other changes, no text, no watermark."
+ },
+ {
+  "id": "tree_veo",
+  "model": "veo-3-1",
+  "ext": "mp4",
+  "image_files": [
+   ".tmp/hero2/tree_first.png",
+   ".tmp/hero2/tree_first.png"
+  ],
+  "extra": {
+   "model": "veo3",
+   "generation_type": "FIRST_AND_LAST_FRAMES_2_VIDEO",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 8
+  },
+  "prompt": "Locked-off tripod shot, completely static camera: no camera movement, no zoom, no pan, no reframing. A warm, calm late-afternoon moment with a very light, gentle breeze. The slender silvery-green leaves and the thin outer twigs of the olive tree flutter and sway softly and continuously, a natural, subtle, organic movement that is stronger at the tips of the branches and calmer near the trunk. The leaves keep their exact shape, size, colour and count; they only move, they never change. The trunk and branches stay still. The pool water behind ripples softly with gently moving sparkles of light. The black lava-stone planter, the soil, the terrace, the hedge, the building and the sky stay perfectly still and unchanged. Constant light, no flicker, no exposure change. No people, no animals, no new objects, no text. Photorealistic, natural, high detail, smooth."
+ },
+ {
+  "id": "tree_kling",
+  "model": "kling-3.0-omni/image-to-video",
+  "ext": "mp4",
+  "image_files": [
+   ".tmp/hero2/tree_first.png",
+   ".tmp/hero2/tree_first.png"
+  ],
+  "extra": {
+   "duration": 8,
+   "resolution": "1080p",
+   "aspect_ratio": "auto",
+   "audio": false,
+   "customize_multi_shots": false,
+   "elements": []
+  },
+  "prompt": "Locked-off tripod shot, completely static camera: no camera movement, no zoom, no pan, no reframing. A warm, calm late-afternoon moment with a very light, gentle breeze. The slender silvery-green leaves and the thin outer twigs of the olive tree flutter and sway softly and continuously, a natural, subtle, organic movement that is stronger at the tips of the branches and calmer near the trunk. The leaves keep their exact shape, size, colour and count; they only move, they never change. The trunk and branches stay still. The pool water behind ripples softly with gently moving sparkles of light. The black lava-stone planter, the soil, the terrace, the hedge, the building and the sky stay perfectly still and unchanged. Constant light, no flicker, no exposure change. No people, no animals, no new objects, no text. Photorealistic, natural, high detail, smooth."
+ },
+ {
+  "id": "full_veo",
+  "model": "veo-3-1",
+  "ext": "mp4",
+  "image_files": [
+   ".tmp/hero2/full_first.png",
+   ".tmp/hero2/full_first.png"
+  ],
+  "extra": {
+   "model": "veo3",
+   "generation_type": "FIRST_AND_LAST_FRAMES_2_VIDEO",
+   "aspect_ratio": "16:9",
+   "resolution": "1080p",
+   "duration": 8
+  },
+  "prompt": "Locked-off tripod shot, completely static camera: no camera movement, no zoom, no pan, no reframing. A warm, calm late-afternoon moment at a modern villa with a very light, gentle breeze. The surface of the swimming pool ripples softly and continuously: fine small wavelets drift slowly across the water with gently moving sparkles of sunlight and softly wavering reflections. The leaves of the olive tree sway very gently. Everything else stays perfectly still and unchanged: the black lava-stone planter, the travertine terrace, the hedge, the building, the curtains, the wall, the sofa, the sky. Constant light, no flicker, no exposure change. No people, no animals, no new objects, no text. Photorealistic, natural, smooth."
+ },
+ {
+  "id": "pool_kling",
+  "model": "kling-3.0-omni/image-to-video",
+  "ext": "mp4",
+  "image_files": [
+   ".tmp/hero2/pool_first.png",
+   ".tmp/hero2/pool_first.png"
+  ],
+  "extra": {
+   "duration": 8,
+   "resolution": "1080p",
+   "aspect_ratio": "auto",
+   "audio": false,
+   "customize_multi_shots": false,
+   "elements": []
+  },
+  "prompt": "Locked-off tripod shot, completely static camera: no camera movement, no zoom, no pan, no reframing. Warm late-afternoon light, a light steady breeze. The surface of the swimming pool is gently rippled by the wind: fine, soft wind ripples drift slowly and continuously across the whole pool, the sparkling highlights of sunlight and the reflections of the wall shimmer and waver softly on the moving water. No drops, no splashes, no circular ripples, nothing falls into the water. The olive tree leaves sway very slightly. The black lava-stone planter, the travertine terrace, the stone wall, the sofa and the hedge stay perfectly still and unchanged. Constant light, no flicker. No people, no animals, no new objects, no text. Photorealistic, natural, high detail, smooth."
+ }
+]

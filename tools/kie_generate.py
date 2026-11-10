@@ -12,6 +12,10 @@ Usage:
   python tools/kie_generate.py --jobs tools/kie_scenes.json --only terrasse --out assets/scenes
   python tools/kie_generate.py --prompt "..." --id test --out .tmp/kie
 
+Video (Veo 3.1): {"id", "model": "veo-3-1", "ext": "mp4", "image_files": [first, last], "prompt",
+       "extra": {"model": "veo3_fast", "generation_type": "FIRST_AND_LAST_FRAMES_2_VIDEO", "aspect_ratio": "16:9",
+                 "resolution": "1080p", "duration": 8}}   (same file as first + last frame -> seamless loop)
+
 Jobs file: JSON list of {"id", "prompt", "aspect_ratio"?, "resolution"?, "model"?, "image_input"? (urls), "image_files"? (local paths, auto-uploaded)}
 Already-downloaded ids are skipped, so re-running never spends credits twice.
 A ledger of every task (id, model, credits, url) is appended to <out>/_kie_log.jsonl.
@@ -89,19 +93,28 @@ def build_input(job, model):
         inp.update(aspect_ratio=ar, output_format="png")
         if job.get("image_input"):
             inp["image_urls"] = job["image_input"]
-    else:  # pass-through for other market models (e.g. seedream), caller supplies extra fields
+    elif model == "veo-3-1":  # video: tier/resolution/duration/generation_type come from job["extra"]
         inp.update(job.get("extra", {}))
+        if job.get("image_input"):
+            inp["image_urls"] = job["image_input"]
+    else:  # pass-through for other market models (e.g. seedream, kling), caller supplies extra fields
+        inp.update(job.get("extra", {}))
+        if job.get("image_input"):   # kling-3.0-omni/image-to-video: image_urls = [first, last]
+            inp[job.get("image_key", "image_urls")] = job["image_input"]
     return inp
 
 
-def run_job(job, key, out_dir, default_model, poll_max=600):
+def run_job(job, key, out_dir, default_model, poll_max=900):
     model = job.get("model", default_model)
-    dest = os.path.join(out_dir, f"{job['id']}.png")
+    dest = os.path.join(out_dir, f"{job['id']}.{job.get('ext', 'png')}")   # "ext": "mp4" for video jobs
     if os.path.exists(dest):
         print(f"[skip] {job['id']} existiert bereits"); return dest
     if job.get("image_files"):   # local files -> upload -> image_input urls
-        job = dict(job, image_input=(job.get("image_input") or []) + [upload(
-            f if os.path.isabs(f) else os.path.join(ROOT, f), key) for f in job["image_files"]])
+        up = {}   # the same file may be listed twice (e.g. first + last frame of a loop): upload once
+        for f in job["image_files"]:
+            if f not in up:
+                up[f] = upload(f if os.path.isabs(f) else os.path.join(ROOT, f), key)
+        job = dict(job, image_input=(job.get("image_input") or []) + [up[f] for f in job["image_files"]])
     res = call("POST", f"{API}/createTask", key, {"model": model, "input": build_input(job, model)})
     if res.get("code") != 200:
         print(f"[FEHLER] {job['id']} createTask: {res.get('code')} {res.get('msg')}"); return None
@@ -117,7 +130,8 @@ def run_job(job, key, out_dir, default_model, poll_max=600):
             print(f"[FEHLER] {job['id']} recordInfo: {q.get('code')} {q.get('msg')}"); return None
         d = q["data"]; st = d.get("state")
         if st == "success":
-            urls = json.loads(d.get("resultJson") or "{}").get("resultUrls") or []
+            rj = json.loads(d.get("resultJson") or "{}")
+            urls = rj.get("resultUrls") or rj.get("result_urls") or (rj.get("data") or {}).get("result_urls") or []
             if not urls:
                 print(f"[FEHLER] {job['id']}: keine resultUrls"); return None
             os.makedirs(out_dir, exist_ok=True)

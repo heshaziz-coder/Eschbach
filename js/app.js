@@ -297,7 +297,27 @@ function loop(){
   requestAnimationFrame(loop);
 }
 
-/* Hero: photo (index.html .hero-photo); motion in the GSAP block below. Old Blender frame hero: .tmp/backup_dark/ */
+/* Hero: the still photo is the base (and the poster). After the page has loaded, the looping video
+   (assets/hero.mp4 desktop, hero_m.mp4 = portrait crop of the same video for phones; tools/hero_video.py) is laid over it
+   and faded in once it can play. No video for reduced motion / data saver, or if the file is missing -> the photo stays. */
+(() => {
+  const media = document.getElementById('heroMedia'); if (!media) return;
+  const conn = navigator.connection || {};
+  if (RM || conn.saveData || /(^|-)2g$/.test(conn.effectiveType || '')) return;
+  const start = () => {
+    const src = matchMedia('(max-width: 700px)').matches ? media.dataset.videoM : media.dataset.video; if (!src) return;
+    const v = document.createElement('video');
+    v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('aria-hidden', 'true'); v.tabIndex = -1;
+    v.addEventListener('playing', () => v.classList.add('on'), {once:true});
+    v.addEventListener('error', () => v.remove());
+    v.src = src; media.appendChild(v);
+    const p = v.play(); if (p && p.catch) p.catch(() => {});
+    // pause while the hero is out of view
+    new IntersectionObserver(es => { if (es[0].isIntersecting) { const q = v.play(); if (q && q.catch) q.catch(() => {}); } else v.pause(); }, {threshold:.05}).observe(media);
+  };
+  if (document.readyState === 'complete') start(); else addEventListener('load', start);
+})();
 
 function bindDrag(p){
   let lastX = 0;
@@ -643,7 +663,9 @@ const LAVA = (() => {
     dName.textContent = colour.name; dColl.textContent = 'Lava'; dForm.textContent = `${form.name} · ${form.size}`;
     dPrice.previousElementSibling.textContent = 'Preis'; dPrice.textContent = form.price;
     dLink.href = v.url || m.url; dLink.firstChild.textContent = 'Im Shop ansehen ';
-    atSec.style.setProperty('--tint', colour.hex);
+    // scene + form previews show the currently selected form / colour
+    list.querySelectorAll('.scene-btn').forEach(b => { b.style.backgroundImage = `url("assets/lava/${b.dataset.id}/thumb__${form.id}__${colour.id}.webp")`; });
+    formsEl.querySelectorAll('.form-btn img').forEach((img, i) => { const t = (m.forms[i].variants[colour.id] || {}).thumb; if (t && !img.src.endsWith(t)) img.src = t; });
     if (window.gsap && !RM) gsap.fromTo(dName, {y:14, opacity:.4}, {y:0, opacity:1, duration:.6, ease:'power3.out'});
   }
   const start = () => fetch('assets/lava/catalog.json', {cache:'no-store'}).then(r => r.ok ? r.json() : null).then(c => {
@@ -712,10 +734,17 @@ if (cstage){
     const slot = document.createElement('div'); slot.className = 'cslot ' + (i % 2 ? 'r' : 'l'); slot.style.zIndex = i + 1;
     const a = document.createElement('a'); a.className = 'ctile';
     a.href = coll ? coll.url : 'https://eschbach-design.com/collections'; a.target = '_blank'; a.rel = 'noopener';
-    a.innerHTML = `<div class="cimg"><img src="assets/collections/${cid}.webp" alt="${name} Collection" width="1100" height="1400" loading="eager"><i class="shade"></i></div>
+    const src = `${i < 2 ? '' : 'data-'}src="assets/collections/${cid}-760.webp?v=2" ${i < 2 ? '' : 'data-'}srcset="assets/collections/${cid}-760.webp?v=2 760w, assets/collections/${cid}.webp?v=2 1100w"`;
+    a.innerHTML = `<div class="cimg"><img ${src} sizes="(max-width: 600px) 100vw, 40vw" alt="${name} Collection" width="1100" height="1400"><i class="shade"></i></div>
       <div class="cap"><b>${name}</b><span>Ansehen</span></div>`;
     slot.appendChild(a); cstage.appendChild(slot);
   });
+  // the remaining six must be fully loaded before they travel up, but must not compete with the hero
+  let rest = false;
+  const loadRest = () => { if (rest) return; rest = true;
+    cstage.querySelectorAll('img[data-src]').forEach(im => { im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); }); };
+  if (document.readyState === 'complete') setTimeout(loadRest, 200); else addEventListener('load', () => setTimeout(loadRest, 200));
+  addEventListener('scroll', loadRest, {once:true, passive:true});
 }
 
 /* ---------------- Material loupe ---------------- */
@@ -732,10 +761,11 @@ function renderFlat(cid, ci){
   const cached = texImgs[cid];
   if (cached === false) return renderFlatProcedural(cid, ci);
   if (cached) return done(cached);
-  const img = new Image();
+  const img = new Image(), full = `assets/textures/${cid}.webp`;
+  const big = surf.offsetWidth * 3 * Math.min(2, window.devicePixelRatio || 1) > 2600;
   img.onload = () => { texImgs[cid] = img; done(img); };
-  img.onerror = () => { texImgs[cid] = false; renderFlatProcedural(cid, ci); };
-  img.src = `assets/textures/${cid}.webp`;
+  img.onerror = () => { if (!img.src.endsWith(full)) { img.src = full; return; } texImgs[cid] = false; renderFlatProcedural(cid, ci); };
+  img.src = big ? full : `assets/textures/${cid}-2400.webp`;
 }
 function renderFlatProcedural(cid, ci){
   flat.width = 960; flat.height = 540;
@@ -805,7 +835,10 @@ readTheme();
 
 /* ---------------- Nav, newsletter ---------------- */
 const nav = document.getElementById('nav');
-addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), {passive:true});
+// light nav while it sits on the hero picture (plain scroll check: also right at the very top and after jumps)
+const heroEl = document.getElementById('hero');
+const navState = () => { nav.classList.toggle('scrolled', scrollY > 20); nav.classList.toggle('on-hero', !!heroEl && scrollY < heroEl.offsetHeight - 72); };
+addEventListener('scroll', navState, {passive:true}); addEventListener('resize', navState); navState();
 document.getElementById('news').addEventListener('submit', e => {
   e.preventDefault(); const v = document.getElementById('email').value.trim(), msg = document.getElementById('newsMsg');
   msg.textContent = /.+@.+\..+/.test(v) ? 'Danke! Im Prototyp wird keine Anmeldung versendet.' : 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
@@ -814,19 +847,22 @@ document.getElementById('news').addEventListener('submit', e => {
 /* ---------------- Resize ---------------- */
 let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { pots.forEach(p => p.fit()); if (flatDone) drawLens(); }, 150); });
 
-/* ---------------- Cursor & magnetic ---------------- */
-const cur = document.querySelector('.cursor');
-if (!RM && matchMedia('(pointer:fine)').matches){
-  let cx = innerWidth/2, cy = innerHeight/2, tx = cx, ty = cy;
-  addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; const el = e.target.closest('[data-cursor]'); const lab = el && el.dataset.cursor;
-    cur.classList.toggle('big', !!lab); if (lab) cur.querySelector('span').textContent = lab;
-    cur.style.opacity = el && el.id === 'surface' ? 0 : 1; });
-  (function cl(){ cx += (tx-cx)*.2; cy += (ty-cy)*.2; cur.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`; requestAnimationFrame(cl); })();
-  document.querySelectorAll('.magnet').forEach(b => {
-    b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.setProperty('--bx', ((e.clientX - r.left - r.width/2)*.22)+'px'); b.style.setProperty('--by', ((e.clientY - r.top - r.height/2)*.3)+'px'); });
-    b.addEventListener('pointerleave', () => { b.style.setProperty('--bx','0px'); b.style.setProperty('--by','0px'); });
-  });
-} else if (cur) cur.style.display = 'none';
+/* ---------------- Phone / tablet menu ---------------- */
+const menuBtn = document.getElementById('menuBtn'), menu = document.getElementById('menu');
+function setMenu(open){
+  if (!menu || menu.hidden === !open) return;
+  root.classList.toggle('menu-open', open);
+  menuBtn.setAttribute('aria-expanded', open); menuBtn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+  menu.hidden = !open;
+  if (lenis) open ? lenis.stop() : lenis.start();
+  if (open && window.gsap && !RM) gsap.fromTo(menu.querySelectorAll('a'), {y:18, opacity:0}, {y:0, opacity:1, duration:.5, ease:'power3.out', stagger:.05});
+}
+if (menuBtn && menu){
+  menuBtn.addEventListener('click', () => setMenu(menu.hidden));
+  menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); }, true);   // capture: close (and restart Lenis) before the anchor scrolls
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  matchMedia('(min-width: 961px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+}
 
 /* ---------------- Manifest words ---------------- */
 const man = document.getElementById('manifest');
@@ -843,13 +879,10 @@ if (window.gsap && window.ScrollTrigger){
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(t => lenis.raf(t*1000)); gsap.ticker.lagSmoothing(0);
   }
-  // Hero photo: gentle zoom-out on load, slow drift on scroll; on phones the nav sits on the photo (light)
-  const heroSec = document.getElementById('hero'), heroImg = heroSec && heroSec.querySelector('.hp-media img');
+  // Hero: full-bleed photo/video at every width, the nav sits on it (light); gentle zoom-out on load, slow drift on scroll
+  const heroSec = document.getElementById('hero'), heroImg = heroSec && heroSec.querySelector('.hp-media');   // figure: photo + video move together
   const phone = () => matchMedia('(max-width: 700px)').matches;
   if (heroSec){
-    ScrollTrigger.create({trigger:heroSec, start:'top top', end:'bottom top+=72',
-      onToggle: s => nav.classList.toggle('on-hero', s.isActive && phone())});
-    nav.classList.toggle('on-hero', phone());
     if (!RM && heroImg){
       gsap.fromTo(heroImg, {scale:1.12}, {scale:1, duration:2, ease:'power3.out'});
       gsap.from('.hp-copy > *', {y:28, opacity:0, duration:1.1, ease:'power3.out', stagger:.12, delay:.25});
@@ -874,7 +907,7 @@ if (window.gsap && window.ScrollTrigger){
           scrollTrigger:{trigger:slot, start:'top bottom', end:'top 15%', scrub:.8, invalidateOnRefresh:true}});
       });
     } else if (cstage){
-      const slots = gsap.utils.toArray('#cstage .cslot'), LOCK = .12;
+      const slots = gsap.utils.toArray('#cstage .cslot'), LOCK = .3;   // .12 -> .3: next image starts and locks in earlier, less empty space
       slots.forEach((slot, i) => {
         if (!i) return;
         const prev = slots[i - 1];

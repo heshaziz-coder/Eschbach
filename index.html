@@ -3,15 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ESCHBACH Showroom</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..600;1,300..600&family=Instrument+Sans:wght@400..600&display=swap">
-<link rel="stylesheet" href="css/style.css?v=20261110c">
+<title>ESCHBACH – Pflanzgefäße aus der Manufaktur</title>
+<meta name="description" content="Handgefertigte Pflanzgefäße aus der ESCHBACH Manufaktur: leicht, frostfest, in acht Kollektionen. Seit 1976.">
+<meta name="theme-color" content="#E8E6E1">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="ESCHBACH">
+<meta property="og:title" content="ESCHBACH – Pflanzgefäße aus der Manufaktur">
+<meta property="og:description" content="Handgefertigte Pflanzgefäße: leicht, frostfest, in acht Kollektionen. Seit 1976.">
+<meta property="og:image" content="https://heshaziz-coder.github.io/Eschbach/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/brand/favicon-180.png">
+<link rel="preload" href="assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css?v=20261111a">
+<link rel="stylesheet" href="css/style.css?v=20261111a">
 </head>
 <body>
-<div class="cursor" aria-hidden="true"><span>Drehen</span></div>
-
 <header class="nav" id="nav">
   <div class="wrap">
     <a href="#top" class="logo" aria-label="ESCHBACH, zur Startseite"><svg class="logo-svg"  viewBox="0 0 134 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,21 +44,32 @@
       <li><a href="#xxl">Projekte</a></li>
       <li><a href="#manufaktur">Manufaktur</a></li>
     </ul>
-    <a class="btn solid magnet" href="https://eschbach-design.com/collections/pflanzkuebel" target="_blank" rel="noopener">Zum Shop</a>
+    <a class="btn solid" href="https://eschbach-design.com/collections/pflanzkuebel" target="_blank" rel="noopener">Zum Shop</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
   </div>
 </header>
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Navigation">
+    <a href="#kollektionen">Kollektionen</a>
+    <a href="#atelier">Atelier</a>
+    <a href="#material">Material</a>
+    <a href="#xxl">Projekte</a>
+    <a href="#manufaktur">Manufaktur</a>
+  </nav>
+  <a class="btn solid" href="https://eschbach-design.com/collections/pflanzkuebel" target="_blank" rel="noopener">Zum Shop</a>
+</div>
 
 <main id="top">
-  <!-- Hero: one large photo (kie.ai editorial scene with the real Lava U Pot), calm zoom on scroll -->
+  <!-- Hero: full-bleed scene with the real Lava U Pot. Desktop = 16:9 (hero-wide), phone = portrait crop of the same scene (hero_m) -->
   <section class="hero-photo" id="hero" aria-label="ESCHBACH, Manufaktur für Pflanzgefäße seit 1976">
     <div class="hp-copy">
       <h1>Gefäße,<br>die bleiben.</h1>
-      <a class="btn magnet" href="#kollektionen">Kollektionen</a>
+      <a class="btn" href="#kollektionen">Kollektionen</a>
     </div>
-    <figure class="hp-media">
+    <figure class="hp-media" id="heroMedia" data-video="assets/hero.mp4?v=20261111a" data-video-m="assets/hero_m.mp4?v=20261111a">
       <picture>
-        <source media="(max-width: 700px)" srcset="assets/hero_m.webp">
-        <img src="assets/hero.webp" alt="ESCHBACH Lava U Pot mit Olivenbaum auf einer Terrasse am Pool" width="1856" height="2304" fetchpriority="high">
+        <source media="(max-width: 700px)" srcset="assets/hero_m.webp?v=20261111a">
+        <img src="assets/hero-wide-1600.webp?v=20261111a" srcset="assets/hero-wide-1600.webp?v=20261111a 1600w, assets/hero-wide.webp?v=20261111a 2752w" sizes="100vw" alt="ESCHBACH Lava U Pot mit Olivenbaum auf einer Terrasse am Pool" width="2752" height="1536" fetchpriority="high">
       </picture>
     </figure>
   </section>
@@ -79,7 +101,7 @@
             <canvas id="sceneB" aria-hidden="true"></canvas>
             <span class="scene-tag" id="sceneTag"></span>
           </div>
-          <canvas id="atPot" width="640" height="640" aria-label="Gefäß in der gewählten Form und Farbe" data-cursor="Ziehen"></canvas>
+          <canvas id="atPot" width="640" height="640" aria-label="Gefäß in der gewählten Form und Farbe"></canvas>
           <p class="hint" id="atHint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>Ziehen zum Drehen</p>
         </div>
         <div class="panel">
@@ -102,7 +124,7 @@
               <div><dt>Form</dt><dd id="dForm">New Egg Pot</dd></div>
               <div><dt>Preis</dt><dd id="dPrice">ab €90</dd></div>
             </dl>
-            <div><a class="btn solid magnet" id="dLink" href="https://eschbach-design.com/collections/pflanzkuebel-kollektion-loft" target="_blank" rel="noopener">In der Kollektion ansehen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+            <div><a class="btn solid" id="dLink" href="https://eschbach-design.com/collections/pflanzkuebel-kollektion-loft" target="_blank" rel="noopener">In der Kollektion ansehen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
           </div>
         </div>
       </div>
@@ -119,7 +141,7 @@
         </div>
         <div class="loupe-wrap">
           <div class="tabs" id="tabs" role="tablist" aria-label="Oberfläche"></div>
-          <div class="surface" id="surface" data-cursor="">
+          <div class="surface" id="surface">
             <canvas class="flat" id="flat" width="960" height="540" aria-label="Oberflächenstruktur im Detail"></canvas>
             <div class="lens" id="lens"><canvas id="lensC" width="400" height="400"></canvas></div>
             <span class="lens-tag" id="lensTag">Lupe ×3 · Loft</span>
@@ -134,7 +156,7 @@
       <div class="xxl-copy">
         <h2>Bis 140 cm.</h2>
         <p class="lead">Großgefäße für Plätze, Lobbys und Dachterrassen.</p>
-        <div><a class="btn magnet" href="https://eschbach-design.com/pages/gewerbekunden" target="_blank" rel="noopener">Projekt anfragen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+        <div><a class="btn" href="https://eschbach-design.com/pages/gewerbekunden" target="_blank" rel="noopener">Projekt anfragen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
       </div>
       <figure class="xxl-photo">
         <img src="assets/xxl.webp" alt="Große ESCHBACH Pflanzschale mit japanischem Ahorn auf einer Terrasse" width="800" height="993" decoding="async" loading="lazy">
@@ -148,7 +170,7 @@
         <p class="year" id="year" aria-label="1976 bis 2026">1976</p>
         <div class="since-copy">
           <h2 style="font-size:clamp(2rem,4vw,3.4rem)">50 Jahre Manufaktur.</h2>
-          <p class="lead">Eigene Produktion. Händler auf vier Kontinenten.</p>
+          <p class="lead">Eigene Produktion. Händler weltweit.</p>
         </div>
       </div>
       <div class="markets"><span>Europa</span><span>Nordamerika</span><span>Japan</span><span>Südafrika</span><span>Australien</span></div>
@@ -186,13 +208,18 @@
         </ul>
       </div>
     </div>
-    <div class="f-bottom"><span>© 2026 ESCHBACH</span></div>
+    <div class="f-bottom"><span>© 2026 ESCHBACH</span>
+      <nav class="f-legal" aria-label="Rechtliches">
+        <a href="https://eschbach-design.com/policies/legal-notice" target="_blank" rel="noopener">Impressum</a>
+        <a href="https://eschbach-design.com/policies/privacy-policy" target="_blank" rel="noopener">Datenschutz</a>
+        <a href="https://eschbach-design.com/policies/terms-of-service" target="_blank" rel="noopener">AGB</a>
+      </nav></div>
   </div>
 </footer>
 
-<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="js/app.js?v=20261110c"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="js/app.js?v=20261111a"></script>
 </body>
 </html>

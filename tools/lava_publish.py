@@ -4,7 +4,8 @@ Publish the Lava test (fully AI-rendered scenes) for the website atelier.
   python tools/lava_publish.py
 
 Input : .tmp/lava/<scene>__<form>__<colour>.png  (kie.ai, tools/kie_lava_test.json)
-Output: assets/lava/<scene>/<form>__<colour>.webp (1200x1500, 4:5), assets/lava/<scene>/thumb.webp,
+Output: assets/lava/<scene>/<form>__<colour>.webp (1200x1500, 4:5), assets/lava/<scene>/thumb.webp and
+        thumb__<form>__<colour>.webp (scene button previews per selection),
         assets/lava/catalog.json (read by js/app.js -> LAVA module)
 
 Alignment: the reference image of every scene (REF form/colour) is cut out with rembg to find the pot
@@ -25,6 +26,7 @@ FORMS = [("u-pot", "U Pot", "D 90 × H 70 cm", "1.070 €"), ("long-balloon", "L
 COLOURS = [("volcanic-black", "Volcanic Black", "#2e2d2c"), ("antique-white", "Antique White", "#e4ddd0")]
 REF = ("u-pot", "volcanic-black")
 OUT_W, OUT_H, FOOT_Y = 1200, 1500, .88
+THUMB_BOX = (0, 300, 1200, 1200)
 
 
 def pot_geometry(path):
@@ -80,14 +82,17 @@ def main():
                     print("[unvollstaendig, uebersprungen]", os.path.basename(p)); continue
                 if im.size != (geo[sid]["W"], geo[sid]["H"]):
                     im = im.resize((geo[sid]["W"], geo[sid]["H"]), Image.LANCZOS)
-                im.crop(box).resize((OUT_W, OUT_H), Image.LANCZOS).save(os.path.join(OUT, sid, f"{fid}__{cid}.webp"), "WEBP", quality=86, method=6)
+                big = im.crop(box).resize((OUT_W, OUT_H), Image.LANCZOS)
+                big.save(os.path.join(OUT, sid, f"{fid}__{cid}.webp"), "WEBP", quality=82, method=6)
+                # scene button preview for exactly this form + colour (the atelier swaps them with the selection)
+                big.crop(THUMB_BOX).resize((480, 360), Image.LANCZOS).save(os.path.join(OUT, sid, f"thumb__{fid}__{cid}.webp"), "WEBP", quality=78)
         ref = Image.open(os.path.join(OUT, sid, f"{REF[0]}__{REF[1]}.webp"))
-        ref.crop((0, 300, 1200, 1200)).resize((480, 360), Image.LANCZOS).save(os.path.join(OUT, sid, "thumb.webp"), "WEBP", quality=80)
+        ref.crop(THUMB_BOX).resize((480, 360), Image.LANCZOS).save(os.path.join(OUT, sid, "thumb.webp"), "WEBP", quality=78)
         cat["scenes"].append({"id": sid, "name": name, "thumb": f"assets/lava/{sid}/thumb.webp"})
         print(f"[ok] {sid}")
     for fid, name, size, price in FORMS:
         thumb = f"assets/pots/lava/{fid}/volcanic-black.webp"
-        variants = {cid: {"url": idx.get((name, cn), "")} for cid, cn, _ in COLOURS}
+        variants = {cid: {"url": idx.get((name, cn), ""), "thumb": f"assets/pots/lava/{fid}/{cid}.webp"} for cid, cn, _ in COLOURS}
         cat["forms"].append({"id": fid, "name": name, "size": size, "price": price, "thumb": thumb, "variants": variants})
     json.dump(cat, open(os.path.join(OUT, "catalog.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("[ok] assets/lava/catalog.json")

@@ -1,0 +1,28 @@
+[
+ {
+  "id": "hero_wide",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "image_files": [
+   ".tmp/hero/hero_wide_canvas.png"
+  ],
+  "prompt": "Outpaint this photograph. The picture in the right part (a black lava-stone planter with an olive tree on a travertine terrace beside a pool, modern villa behind) is finished and must stay exactly as it is, pixel for pixel: same planter, same tree, same position, same size, same light. Fill ONLY the flat grey areas on the left and on the far right so the result is one seamless, continuous wide 16:9 photograph of the same place: continue the warm beige travertine floor slabs with their joints in correct perspective, continue the long calm swimming pool and its stone edge to the left, continue the low clipped box hedge, and continue the modern villa with its floor-to-ceiling glass facade, linen curtains and pale stone cladding to the left; soft late-afternoon sunlight with the same direction and colour, same depth of field. The left half is calm and uncluttered: only terrace, pool, hedge, villa and a little sky - no additional planters, no pots, no trees in pots, no people, no furniture in the left half. Photorealistic architectural photograph, no visible seam, no border, no grey left anywhere, no text, no watermark."
+ },
+ {
+  "id": "hero_loop",
+  "model": "veo-3-1",
+  "ext": "mp4",
+  "image_files": [
+   ".tmp/hero/hero_frame.png",
+   ".tmp/hero/hero_frame.png"
+  ],
+  "extra": {
+   "model": "veo3",
+   "generation_type": "FIRST_AND_LAST_FRAMES_2_VIDEO",
+   "aspect_ratio": "16:9",
+   "resolution": "1080p",
+   "duration": 8
+  },
+  "prompt": "Locked-off tripod shot, completely static camera: no camera movement, no zoom, no pan, no change of framing. A calm late-afternoon moment at a modern villa. The leaves and thin outer branches of the olive tree sway very gently in a light breeze. The surface of the swimming pool ripples softly with slowly moving light reflections. The linen curtains behind the glass move almost imperceptibly. Everything else stays perfectly still and unchanged: the black lava-stone planter, the travertine terrace, the hedge, the building, the sofa. The light stays constant, no flicker, no exposure change. No people, no animals, no new objects, no text. Photorealistic, natural, quiet."
+ }
+]

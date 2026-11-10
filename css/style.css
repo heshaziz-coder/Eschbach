@@ -514,3 +514,59 @@ h2{font-size:clamp(1.9rem,4.2vw,3.6rem)}
 @media (min-width:601px){.cstage{--cw:min(40vw,calc(74vh * 1100 / 1400))}}
 /* footer: no giant wordmark */
 .f-mark{display:none}
+
+/* ===== Fix pass 2026-11-10 (review): menu, calm atelier ground, nav above the hero photo, legal links ===== */
+.cursor{display:none!important}
+.btn{transform:none}
+/* atelier: neutral ground (it used to take the colour of the selected pot) */
+.atelier{background:var(--surface);transition:none}
+/* desktop / tablet: the photo starts below the navigation, so the links never sit on the picture */
+@media (min-width:701px){
+  .hp-media{margin-top:72px;height:calc(100vh - 72px);height:calc(100svh - 72px)}
+}
+/* menu button + panel (up to 960 px, where the link row is hidden) */
+.menu-btn{display:none;position:relative;width:44px;height:44px;margin-right:-10px;padding:0;border:0;background:transparent;color:inherit;cursor:pointer}
+.menu-btn i{position:absolute;left:10px;right:10px;height:1.5px;background:currentColor;transition:transform .35s var(--ease),top .35s var(--ease)}
+.menu-btn i:first-child{top:17px}
+.menu-btn i:last-child{top:26px}
+.menu-open .menu-btn i:first-child{top:21.5px;transform:rotate(45deg)}
+.menu-open .menu-btn i:last-child{top:21.5px;transform:rotate(-45deg)}
+.menu{position:fixed;inset:0;z-index:49;background:var(--bg);color:var(--fg);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;
+  padding:calc(72px + env(safe-area-inset-top,0px) + 6vh) var(--gut) calc(32px + env(safe-area-inset-bottom,0px)) var(--gut);overflow-y:auto}
+.menu nav{display:grid}
+.menu nav a{font-family:var(--f-display);font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(1.7rem,7.5vw,2.6rem);line-height:1.1;
+  text-decoration:none;padding:.55em 0;border-bottom:1px solid var(--line)}
+.menu .btn{justify-content:center;padding:1.15em 1.6em}
+html.menu-open{overflow:hidden}
+.menu-open .nav,.menu-open .nav.on-hero{background:var(--bg);color:var(--fg);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom-color:var(--line)}
+.menu-open .nav.on-hero .logo{color:var(--fg)}
+@media (max-width:960px){.menu-btn{display:block}.nav .wrap{gap:1rem}.nav .btn{display:none}}
+@media (min-width:961px){.menu{display:none!important}}
+/* material tabs on phones: two tidy rows of three */
+@media (max-width:600px){.tabs{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:.5rem 1rem}.tab{text-align:left;justify-self:start}}
+/* footer: legal links */
+.f-legal{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem}
+.f-legal a{color:var(--muted);text-decoration:none;transition:color .25s}
+.f-legal a:hover{color:var(--fg)}
+
+/* ===== Hero v3: full-bleed at every width (desktop 16:9 scene, phone portrait crop), copy on the picture ===== */
+.hero-photo{display:block;position:relative;min-height:100vh;min-height:100svh;background:#1a1815}
+.hp-media{position:absolute;inset:0;margin:0;height:auto}
+.hp-media img,.hp-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 50%}
+.hp-media::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(rgba(0,0,0,.34),transparent 20%),linear-gradient(75deg,rgba(0,0,0,.5),rgba(0,0,0,.18) 38%,transparent 60%)}
+.hp-copy{position:relative;z-index:2;min-height:100vh;min-height:100svh;display:grid;align-content:end;justify-items:start;gap:2rem;color:#fff;
+  padding:0 var(--gut) clamp(56px,11vh,120px)}
+.hp-copy .btn{color:#fff;border-color:rgba(255,255,255,.7)}
+.hp-copy .btn:hover{background:#fff;color:#1A1815;border-color:#fff}
+.nav.on-hero{color:#fff;background:none}
+.nav.on-hero ul a{color:rgba(255,255,255,.86)}
+.nav.on-hero ul a:hover{color:#fff}
+.nav.on-hero .btn.solid{background:#fff;color:#1A1815;border-color:#fff}
+@media (max-width:700px){.hp-media img,.hp-media video{object-position:50% 50%}
+  .hp-media::after{background:linear-gradient(rgba(0,0,0,.38),transparent 22%,transparent 50%,rgba(0,0,0,.6))}}
+/* hero video fades in over the still once it plays; the figure itself is zoomed/moved (js), so clip on the section */
+.hero-photo{overflow:hidden}
+.hp-media video{opacity:0;transition:opacity 1.2s ease}
+.hp-media video.on{opacity:1}
+.hp-media::after{z-index:1}

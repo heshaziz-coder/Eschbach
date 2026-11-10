@@ -22,10 +22,12 @@
    "thumb": "assets/pots/lava/u-pot/volcanic-black.webp",
    "variants": {
     "volcanic-black": {
-     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-lava-collection-volcanic-black"
+     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-lava-collection-volcanic-black",
+     "thumb": "assets/pots/lava/u-pot/volcanic-black.webp"
     },
     "antique-white": {
-     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-lava-collection-antique-white"
+     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-lava-collection-antique-white",
+     "thumb": "assets/pots/lava/u-pot/antique-white.webp"
     }
    }
   },
@@ -37,10 +39,12 @@
    "thumb": "assets/pots/lava/long-balloon/volcanic-black.webp",
    "variants": {
     "volcanic-black": {
-     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-lava-collection-volcanic-black"
+     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-lava-collection-volcanic-black",
+     "thumb": "assets/pots/lava/long-balloon/volcanic-black.webp"
     },
     "antique-white": {
-     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-lava-collection-antique-white"
+     "url": "https://eschbach-design.com/products/pflanzkuebel-eschbach-long-balloon-lava-collection-antique-white",
+     "thumb": "assets/pots/lava/long-balloon/antique-white.webp"
     }
    }
   }
