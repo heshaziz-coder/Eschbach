@@ -642,3 +642,7 @@ footer .f-col a,footer .sel{color:var(--fg)}
 /* atelier summary: Kollektion · Form · Größe · Preis (sizes only here, not on the form buttons) */
 .spec{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:440px){.spec{grid-template-columns:1fr 1fr}}
+/* phone / tablet header: compact "Zum Shop" between logo and menu button (most visitors are mobile) */
+@media (max-width:960px){.nav .btn{display:inline-flex;margin-left:auto;padding:.62em 1.05em;font-size:.8125rem}.nav .menu-btn{margin-left:.4rem}}
+.f-top>div{min-width:0}
+.f-col a{overflow-wrap:anywhere}
