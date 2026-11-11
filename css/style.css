@@ -598,3 +598,44 @@ footer{--bg:var(--band);--fg:var(--band-fg);--muted:var(--band-muted);--line:rgb
 footer .f-col a,footer .sel{color:var(--fg)}
 .f-top{grid-template-columns:minmax(0,1.6fr) repeat(2,minmax(0,.7fr))}
 @media (max-width:760px){.f-top{grid-template-columns:1fr 1fr}}
+
+/* ---- Feedback pass (2026-11-11) ---- */
+/* USP line under the manifest statement: quiet proof points instead of icons */
+.usp{list-style:none;margin:clamp(48px,7vh,80px) 0 0;padding:1.4rem 0 0;border-top:1px solid rgba(236,230,219,.14);
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem 2rem;
+  font:500 .8125rem/1.4 var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--band-muted)}
+.usp a{color:var(--band-fg);text-decoration:none;border-bottom:1px solid rgba(236,230,219,.35);transition:border-color .3s}
+.usp a:hover{border-color:var(--band-fg)}
+@media (max-width:760px){.usp{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* hero video pause / play (WCAG 2.2.2) */
+.hp-pause{position:absolute;right:var(--gutr);bottom:clamp(24px,5vh,48px);z-index:3;width:40px;height:40px;border-radius:50%;
+  display:grid;place-items:center;padding:0;cursor:pointer;color:#fff;background:rgba(20,18,16,.28);
+  border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  opacity:0;pointer-events:none;transition:opacity .6s,background-color .3s}
+.hp-pause.on{opacity:1;pointer-events:auto}
+.hp-pause:hover{background:rgba(20,18,16,.5)}
+.hp-pause:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.hp-pause svg{width:14px;height:14px}
+
+/* phone hero: white headline over the picture (as before), a little smaller; button well above the section end,
+   pause button on the same line */
+@media (max-width:700px){
+  .hp-copy{gap:1.4rem;padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
+  .hp-copy h1{font-size:clamp(2.1rem,9.6vw,2.7rem)}
+  .hp-copy .btn{padding:.85em 1.3em}
+}
+
+/* minimum text size 13 px (labels, nav, captions, legal) */
+.eyebrow,.ctl-label,.spec dt,.f-col h4,.lens-tag,.ctile .cap span,.hint,.form-btn.photo small,.nav ul a{font-size:.8125rem}
+.scene-btn span{font-size:.8125rem}
+.form-btn,.form-btn small{font-size:.8125rem}
+.f-bottom{font-size:.8125rem}
+@media (max-width:600px){.ctile .cap span{font-size:.8125rem}}
+
+/* footer: newsletter link + contact links */
+.news-lead{color:var(--muted);max-width:40ch;margin:0 0 1.6rem}
+.tab,.form-btn.photo span,.form-btn.photo small{font-size:.8125rem}
+/* .btn had a CSS transition on transform (old magnetic effect); it fought the GSAP intro (y:28 -> 0) and left the hero
+   button stuck 28 px too low. No transform transition any more. */
+.btn{transition:background-color .3s,color .3s,border-color .3s}

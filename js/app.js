@@ -313,8 +313,23 @@ function loop(){
     v.addEventListener('error', () => v.remove());
     v.src = src; media.appendChild(v);
     const p = v.play(); if (p && p.catch) p.catch(() => {});
-    // pause while the hero is out of view
-    new IntersectionObserver(es => { if (es[0].isIntersecting) { const q = v.play(); if (q && q.catch) q.catch(() => {}); } else v.pause(); }, {threshold:.05}).observe(media);
+    let userPaused = false;
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'hp-pause';
+    const ICON = {pause:'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9M11 3.5v9" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>',
+                  play:'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5l7 4.5-7 4.5z" fill="currentColor"/></svg>'};
+    const sync = () => { btn.innerHTML = userPaused ? ICON.play : ICON.pause; btn.setAttribute('aria-label', userPaused ? 'Video abspielen' : 'Video pausieren'); };
+    btn.addEventListener('click', () => { userPaused = !userPaused; if (userPaused) v.pause(); else { const q = v.play(); if (q && q.catch) q.catch(() => {}); } sync(); });
+    media.parentElement.appendChild(btn);
+    // sit on the same line as the "Kollektionen" button (layout positions, transforms ignored)
+    const cta = document.querySelector('.hp-copy .btn'), hero = media.parentElement;
+    const align = () => { if (!cta) return; const y = cta.offsetTop + cta.offsetHeight / 2;
+      let el = cta.offsetParent, top = 0; while (el && el !== hero) { top += el.offsetTop; el = el.offsetParent; }
+      btn.style.bottom = Math.round(hero.offsetHeight - (top + y) - 20) + 'px'; };
+    align(); addEventListener('resize', align);
+    sync(); v.addEventListener('playing', () => { align(); btn.classList.add('on'); }, {once:true});
+    // pause while the hero is out of view (but never restart a video the visitor paused)
+    new IntersectionObserver(es => { if (es[0].isIntersecting && !userPaused) { const q = v.play(); if (q && q.catch) q.catch(() => {}); } else v.pause(); }, {threshold:.05}).observe(media);
   };
   if (document.readyState === 'complete') start(); else addEventListener('load', start);
 })();
@@ -753,17 +768,20 @@ const lensC = document.getElementById('lensC'), lctx = lensC.getContext('2d'), l
 const matChoices = [['loft',2],['terra',1],['antique',1],['lava',0],['granite',0],['vertical',0]];
 let lensPos = {x:.62, y:.48};
 // Blender surface macros (assets/textures/<id>.webp); procedural texture stays as fallback.
-const texImgs = {};
+const texImgs = {}; let flatSel = '';
 function renderFlat(cid, ci){
   const coll0 = COLL.find(c=>c.id===cid);
   const done = img => { flat.width = img.naturalWidth; flat.height = img.naturalHeight; fctx.drawImage(img, 0, 0);
     drawLens(); lensTag.textContent = `Lupe ×3 · ${coll0.name} · ${coll0.colors[ci][0]}`; };
   const cached = texImgs[cid];
-  if (cached === false) return renderFlatProcedural(cid, ci);
-  if (cached) return done(cached);
-  const img = new Image(), full = `assets/textures/${cid}.webp`;
+  if (cached === false) { flatSel = cid; return renderFlatProcedural(cid, ci); }
+  if (cached) { flatSel = cid; return done(cached); }
+  const img = new Image(), full = `assets/textures/${cid}.webp`, sel = flatSel = cid;
   const big = surf.offsetWidth * 3 * Math.min(2, window.devicePixelRatio || 1) > 2600;
-  img.onload = () => { texImgs[cid] = img; done(img); };
+  const prev = new Image();                                       // ~20 KB preview (tools/optimize_images.py -480) -> no empty box
+  prev.onload = () => { if (flatSel === sel && !texImgs[cid]) done(prev); };
+  prev.src = `assets/textures/${cid}-480.webp`;
+  img.onload = () => { texImgs[cid] = img; if (flatSel === sel) done(img); };
   img.onerror = () => { if (!img.src.endsWith(full)) { img.src = full; return; } texImgs[cid] = false; renderFlatProcedural(cid, ci); };
   img.src = big ? full : `assets/textures/${cid}-2400.webp`;
 }
@@ -813,7 +831,7 @@ surf.addEventListener('pointermove', e => {
   drawLens();
 });
 let flatDone = false;
-const flatIO = new IntersectionObserver(es => { if (es[0].isIntersecting && !flatDone){ flatDone = true; renderFlat('loft',2); } }, {rootMargin:'400px'});
+const flatIO = new IntersectionObserver(es => { if (es[0].isIntersecting && !flatDone){ flatDone = true; renderFlat('loft',2); } }, {rootMargin:'900px'});
 flatIO.observe(surf);
 
 /* ---------------- Theme toggle ---------------- */
@@ -833,7 +851,7 @@ matchMedia('(prefers-color-scheme: light)').addEventListener?.('change', refresh
 new MutationObserver(refreshTheme).observe(root, {attributes:true, attributeFilter:['data-theme']});
 readTheme();
 
-/* ---------------- Nav, newsletter ---------------- */
+/* ---------------- Nav ---------------- */
 const nav = document.getElementById('nav');
 // light nav while it sits on the hero picture (plain scroll check: also right at the very top and after jumps)
 const heroEl = document.getElementById('hero');
@@ -844,10 +862,7 @@ const navState = () => {
   nav.classList.toggle('on-dark', !onHero && darkEls.some(el => { const r = el.getBoundingClientRect(); return r.top <= mid && r.bottom >= mid; }));
 };
 addEventListener('scroll', navState, {passive:true}); addEventListener('resize', navState); navState();
-document.getElementById('news').addEventListener('submit', e => {
-  e.preventDefault(); const v = document.getElementById('email').value.trim(), msg = document.getElementById('newsMsg');
-  msg.textContent = /.+@.+\..+/.test(v) ? 'Danke! Im Prototyp wird keine Anmeldung versendet.' : 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
-});
+// newsletter: sign-up happens in the shop (footer link), no form on this page
 
 /* ---------------- Resize ---------------- */
 let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { pots.forEach(p => p.fit()); if (flatDone) drawLens(); }, 150); });
@@ -897,7 +912,7 @@ if (window.gsap && window.ScrollTrigger){
   const words = man.querySelectorAll('.w');
   ScrollTrigger.create({trigger:man, start:'top 78%', end:'bottom 45%', onUpdate:s => { const n = Math.round(s.progress*words.length); words.forEach((w,i) => w.classList.toggle('on', i < n)); }});
   if (!RM){
-    gsap.utils.toArray('.at-head, .colls-head, .mat-copy, .loupe-wrap, .xxl-copy, .scale, .since-copy, .markets, .f-top').forEach(el => {
+    gsap.utils.toArray('.usp, .at-head, .colls-head, .mat-copy, .loupe-wrap, .xxl-copy, .scale, .since-copy, .markets, .f-top').forEach(el => {
       gsap.from(el, {y:40, opacity:.35, duration:1.1, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 88%'}});
     });
     // relay: only ever one image sprints. Image i waits (lagging just below the screen) until image i-1 has

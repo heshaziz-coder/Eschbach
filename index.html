@@ -19,8 +19,8 @@
 <link rel="apple-touch-icon" href="assets/brand/favicon-180.png">
 <link rel="preload" href="assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/fonts.css?v=20261111d">
-<link rel="stylesheet" href="css/style.css?v=20261111d">
+<link rel="stylesheet" href="css/fonts.css?v=20261111f">
+<link rel="stylesheet" href="css/style.css?v=20261111f">
 </head>
 <body>
 <header class="nav" id="nav">
@@ -66,10 +66,10 @@
       <h1>Gefäße,<br>die bleiben.</h1>
       <a class="btn" href="#kollektionen">Kollektionen</a>
     </div>
-    <figure class="hp-media" id="heroMedia" data-video="assets/hero.mp4?v=20261111d" data-video-m="assets/hero_m.mp4?v=20261111d">
+    <figure class="hp-media" id="heroMedia" data-video="assets/hero.mp4?v=20261111f" data-video-m="assets/hero_m.mp4?v=20261111f">
       <picture>
-        <source media="(max-width: 700px)" srcset="assets/hero_m.webp?v=20261111d">
-        <img src="assets/hero-wide-1600.webp?v=20261111d" srcset="assets/hero-wide-1600.webp?v=20261111d 1600w, assets/hero-wide.webp?v=20261111d 2752w" sizes="100vw" alt="ESCHBACH Lava U Pot mit Olivenbaum auf einer Terrasse am Pool" width="2752" height="1536" fetchpriority="high">
+        <source media="(max-width: 700px)" srcset="assets/hero_m.webp?v=20261111f">
+        <img src="assets/hero-wide-1600.webp?v=20261111f" srcset="assets/hero-wide-1600.webp?v=20261111f 1600w, assets/hero-wide.webp?v=20261111f 2752w" sizes="100vw" alt="ESCHBACH Lava U Pot mit Olivenbaum auf einer Terrasse am Pool" width="2752" height="1536" fetchpriority="high">
       </picture>
     </figure>
   </section>
@@ -77,6 +77,12 @@
   <section class="manifest">
     <div class="wrap">
       <p class="big" id="manifest">Jedes Gefäß entsteht von Hand. Leicht, frostfest, gemacht für viele Winter.</p>
+      <ul class="usp" aria-label="Qualitätsmerkmale">
+        <li><a href="https://eschbach-design.com/pages/garantiebedingungen" target="_blank" rel="noopener">10 Jahre Frostfest-Garantie</a></li>
+        <li>ESCHBACH LITE® Fiberglas</li>
+        <li>UV-stabil</li>
+        <li>Kostenlose Lieferung in Deutschland</li>
+      </ul>
     </div>
   </section>
 
@@ -102,7 +108,7 @@
             <span class="scene-tag" id="sceneTag"></span>
           </div>
           <canvas id="atPot" width="640" height="640" aria-label="Gefäß in der gewählten Form und Farbe"></canvas>
-          <p class="hint" id="atHint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>Ziehen zum Drehen</p>
+          <p class="hint" id="atHint" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>Ziehen zum Drehen</p>
         </div>
         <div class="panel">
           <div id="scenesCtl" hidden>
@@ -114,17 +120,17 @@
             <div class="forms" id="forms" role="group" aria-labelledby="formsLabel"></div>
           </div>
           <div>
-            <span class="ctl-label">Farbe nach Kollektion</span>
+            <span class="ctl-label">Farbe</span>
             <div class="groups" id="groups"></div>
           </div>
           <div class="detail" aria-live="polite">
-            <h3 id="dName">Rust Brown</h3>
+            <h3 id="dName">Volcanic Black</h3>
             <dl class="spec">
-              <div><dt>Kollektion</dt><dd id="dColl">Loft</dd></div>
-              <div><dt>Form</dt><dd id="dForm">New Egg Pot</dd></div>
-              <div><dt>Preis</dt><dd id="dPrice">ab €90</dd></div>
+              <div><dt>Kollektion</dt><dd id="dColl">Lava</dd></div>
+              <div><dt>Form</dt><dd id="dForm">U Pot · D 90 × H 70 cm</dd></div>
+              <div><dt>Preis</dt><dd id="dPrice">1.070 €</dd></div>
             </dl>
-            <div><a class="btn solid" id="dLink" href="https://eschbach-design.com/collections/pflanzkuebel-kollektion-loft" target="_blank" rel="noopener">In der Kollektion ansehen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+            <div><a class="btn solid" id="dLink" href="https://eschbach-design.com/products/pflanzkuebel-eschbach-u-pot-lava-collection-volcanic-black" target="_blank" rel="noopener">Im Shop ansehen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
           </div>
         </div>
       </div>
@@ -183,18 +189,14 @@
     <div class="f-top">
       <div>
         <h2>Neuheiten zuerst erfahren.</h2>
-        <form class="news" id="news" novalidate>
-          <label for="email" class="sr" style="position:absolute;left:-9999px">E-Mail</label>
-          <input id="email" type="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required>
-          <button class="btn solid" type="submit">Anmelden</button>
-        </form>
-        <p class="news-msg" id="newsMsg"></p>
+        <p class="news-lead">Neue Kollektionen und Farben per E-Mail. Die Anmeldung erfolgt im ESCHBACH Shop.</p>
+        <a class="btn solid" href="https://eschbach-design.com/#newsletter-form-sections--27813610619255__footer" target="_blank" rel="noopener">Zur Anmeldung <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </div>
       <div class="f-col">
         <h4>Kontakt</h4>
         <ul>
-          <li class="sel">+49 (0)2224 97670711</li>
-          <li class="sel">service@eschbach-design.com</li>
+          <li><a href="tel:+49222497670711">+49 (0)2224 97670711</a></li>
+          <li><a href="mailto:service@eschbach-design.com">service@eschbach-design.com</a></li>
           <li><a href="https://eschbach-design.com/pages/contact" target="_blank" rel="noopener">Kontaktformular</a></li>
         </ul>
       </div>
@@ -220,6 +222,6 @@
 <script src="assets/vendor/lenis.min.js"></script>
 <script src="assets/vendor/gsap.min.js"></script>
 <script src="assets/vendor/ScrollTrigger.min.js"></script>
-<script src="js/app.js?v=20261111d"></script>
+<script src="js/app.js?v=20261111f"></script>
 </body>
 </html>

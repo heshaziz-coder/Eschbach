@@ -8,7 +8,7 @@ Responsive image variants + icons (page weight). Run after new source images arr
   hero         assets/hero_src.png|jpg if present, else the published assets/hero.webp
                -> assets/hero.webp (max 1856w) + hero-1280.webp
                .tmp/hero/hero_wide_final.png -> assets/hero-wide.webp + hero-wide-1600.webp (desktop, 16:9) + hero_m.webp (phone crop)
-  textures     assets/textures/<id>.webp -> <id>-2400.webp (loupe picks by screen, js/app.js renderFlat)
+  textures     assets/textures/<id>.webp -> <id>-2400.webp (loupe picks by screen) + <id>-480.webp (preview), js/app.js renderFlat
   icons        assets/brand/logo-mark.png -> favicon-32.png, favicon-180.png (apple-touch-icon)
 
 Sources that are missing are skipped (published files stay as they are).
@@ -58,9 +58,11 @@ def hero():
 
 def textures():
     for p in sorted(glob.glob(J("assets", "textures", "*.webp"))):
-        if p.endswith("-2400.webp"):
+        if p.endswith("-2400.webp") or p.endswith("-480.webp"):
             continue
-        save(Image.open(p).convert("RGB"), p[:-5] + "-2400.webp", 2400, 80)
+        im = Image.open(p).convert("RGB")
+        save(im, p[:-5] + "-2400.webp", 2400, 80)
+        save(im, p[:-5] + "-480.webp", 480, 70)      # instant preview while the big one loads (js/app.js renderFlat)
 
 
 def icons():
