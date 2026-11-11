@@ -675,7 +675,7 @@ const LAVA = (() => {
   }
   function detail(){
     const v = form.variants[colour.id] || {};
-    dName.textContent = colour.name; dColl.textContent = 'Lava'; dForm.textContent = `${form.name} · ${form.size}`;
+    dName.textContent = colour.name; dColl.textContent = 'Lava'; dForm.textContent = form.name; const dSize = document.getElementById('dSize'); if (dSize) dSize.textContent = form.size;
     dPrice.previousElementSibling.textContent = 'Preis'; dPrice.textContent = form.price;
     dLink.href = v.url || m.url; dLink.firstChild.textContent = 'Im Shop ansehen ';
     // scene + form previews show the currently selected form / colour
@@ -696,7 +696,7 @@ const LAVA = (() => {
     formsEl.innerHTML = '';
     m.forms.forEach(f => {
       const b = document.createElement('button'); b.type = 'button'; b.className = 'form-btn photo';
-      b.innerHTML = `<img src="${f.thumb}" alt="" decoding="async"><span>${f.name}<br><small>${f.size}</small></span>`;
+      b.innerHTML = `<img src="${f.thumb}" alt="" decoding="async"><span>${f.name}</span>`; b.setAttribute('aria-label', `${f.name}, ${f.size}`);
       b.addEventListener('click', () => { form = f; press(formsEl, '.form-btn', b); detail(); draw(); }); formsEl.appendChild(b);
     });
     groupsEl.previousElementSibling.textContent = 'Farbe';

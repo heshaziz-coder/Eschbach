@@ -639,3 +639,6 @@ footer .f-col a,footer .sel{color:var(--fg)}
 /* .btn had a CSS transition on transform (old magnetic effect); it fought the GSAP intro (y:28 -> 0) and left the hero
    button stuck 28 px too low. No transform transition any more. */
 .btn{transition:background-color .3s,color .3s,border-color .3s}
+/* atelier summary: Kollektion · Form · Größe · Preis (sizes only here, not on the form buttons) */
+.spec{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:440px){.spec{grid-template-columns:1fr 1fr}}
