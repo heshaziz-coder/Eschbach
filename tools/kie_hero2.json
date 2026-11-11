@@ -77,5 +77,23 @@
    "elements": []
   },
   "prompt": "Locked-off tripod shot, completely static camera: no camera movement, no zoom, no pan, no reframing. Warm late-afternoon light, a light steady breeze. The surface of the swimming pool is gently rippled by the wind: fine, soft wind ripples drift slowly and continuously across the whole pool, the sparkling highlights of sunlight and the reflections of the wall shimmer and waver softly on the moving water. No drops, no splashes, no circular ripples, nothing falls into the water. The olive tree leaves sway very slightly. The black lava-stone planter, the travertine terrace, the stone wall, the sofa and the hedge stay perfectly still and unchanged. Constant light, no flicker. No people, no animals, no new objects, no text. Photorealistic, natural, high detail, smooth."
+ },
+ {
+  "id": "tree_kling2",
+  "model": "kling-3.0-omni/image-to-video",
+  "ext": "mp4",
+  "image_files": [
+   ".tmp/hero2/tree_first.png",
+   ".tmp/hero2/tree_first.png"
+  ],
+  "extra": {
+   "duration": 8,
+   "resolution": "1080p",
+   "aspect_ratio": "auto",
+   "audio": false,
+   "customize_multi_shots": false,
+   "elements": []
+  },
+  "prompt": "Locked-off tripod shot, completely static camera: no camera movement, no zoom, no pan, no reframing. A warm late-afternoon moment with a steady, light summer breeze. The olive tree moves clearly and continuously in the wind for the whole clip: the whole crown sways softly from side to side, the thin outer branches bend and swing gently, and the slender silvery-green leaves flutter, turn and shimmer, showing their pale undersides now and then. The movement is natural, smooth and calm, stronger at the tips of the branches and calmer near the trunk, with gentle gusts that come and go. The leaves keep their exact shape, size and colour; they only move. The trunk stays still. The pool water behind ripples softly. The black lava-stone planter, the soil, the terrace, the hedge, the building and the sky stay perfectly still and unchanged. Constant light, no flicker. No people, no animals, no new objects, no text. Photorealistic, natural, high detail."
  }
 ]

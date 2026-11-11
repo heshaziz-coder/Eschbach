@@ -2,7 +2,7 @@
 Hero cinemagraph v2 (2026-11-11). Replaces tools/hero_video.py, whose synthetic wind the user rejected as unnatural.
 
   python tools/hero_cinemagraph.py still     # still with gently rippled water + model input frames + masks
-  python tools/kie_generate.py --jobs tools/kie_hero2.json --only tree_kling,pool_kling --out .tmp/hero2
+  python tools/kie_generate.py --jobs tools/kie_hero2.json --only tree_kling2,pool_kling --out .tmp/hero2
   python tools/hero_cinemagraph.py build --tree .tmp/hero2/tree_kling.mp4 --full .tmp/hero2/pool_kling.mp4 --pool
          -> assets/hero.mp4 (1920x1080) + assets/hero_m.mp4 (864x1536, phone)
   python tools/hero_cinemagraph.py build --encode-only    # re-encode the lossless masters only
@@ -43,7 +43,7 @@ K = 1920 / SW                                  # still frame -> 1920 frame
 VIEWS = [("hero.mp4", 0, 0, K, 1920, 1080),
          ("hero_m.mp4", 1498, 0, 1.0, 864, 1536)]   # phone: 9:16 around tree + planter (x=1357 of 1920 -> 1931 of 2732)
 ROI = (1080, 0, 560, 700)                      # crown in the 1920 frame (see encode)
-CRF = {"hero.mp4": (22, -0.32), "hero_m.mp4": (27, -0.25)}   # crf, x264 quantiser offset on the crown -> 3.3 MB / 1.9 MB
+CRF = {"hero.mp4": (22, 0), "hero_m.mp4": (26, 0)}   # crf, x264 quantiser offset on the crown (0 = no ROI) -> ~2.1 / 1.6 MB
 
 
 def obj_mask(im, box):
@@ -100,6 +100,9 @@ def frames(path, fps=None):
     p.wait()
 
 
+GROW = 25                                      # crown mask margin in px (1920 frame); build --grow
+
+
 def masks():
     """Tree mask (crown dilated so swaying leaves stay inside, trunk tight) + water mask, 1920x1080 float 0..1."""
     CW, CH = 1920, 1080
@@ -109,7 +112,7 @@ def masks():
     tree = obj.copy(); tree[rim - 2:, :] = False
     crown = tree.copy(); crown[470:, :] = False                       # crown (branch split at ~y 470)
     trunk = tree & ~crown
-    big = np.asarray(img(crown).filter(ImageFilter.MaxFilter(51)).filter(ImageFilter.GaussianBlur(8))) / 255
+    big = np.asarray(img(crown).filter(ImageFilter.MaxFilter(2 * GROW + 1)).filter(ImageFilter.GaussianBlur(8))) / 255
     small = np.asarray(img(trunk).filter(ImageFilter.MaxFilter(7)).filter(ImageFilter.GaussianBlur(2))) / 255
     yy = np.arange(CH)[:, None]; xx = np.arange(CW)[None, :]
     tm = np.maximum(big, small) * np.clip((rim - 4 - yy) / 6, 0, 1)  # never over the planter rim
@@ -191,11 +194,13 @@ def encode(out_dir, crf=None, params="ipratio=1.0:pbratio=1.0"):
     # No B-frames / keyint / deadzone did not help. Spending bits on the crown only does: addroi qoffset -0.32 at crf 22
     # -> wrap 1.1, 80 % of the motion kept, 3.4 MB (whole frame at crf 16 is bigger and worse).
     # Phone (864x1536, crown = 60 % of the frame): crf 27 / -0.25 -> 1.9 MB, wrap 2.0 (crf 24 / -0.32 would be 4.5 MB).
+    # Update 2026-11-11 (stronger breeze, tree_kling2): with real sway the ROI makes the files 3-6 MB. Instead the file
+    # starts shortly after the gust begins (build --start): the I-frame pop at the wrap is hidden by the motion.
     rx, ry, rw, rh = ROI
     for v in VIEWS:
         name, vx, vy, s, w, h = v
         k = s / K; x0, y0 = vx * s, vy * s; c, rq = CRF[name]
-        roi = f"addroi=x={round(rx * k - x0)}:y={round(ry * k - y0)}:w={round(rw * k)}:h={round(rh * k)}:qoffset={rq}"
+        roi = f"addroi=x={round(rx * k - x0)}:y={round(ry * k - y0)}:w={round(rw * k)}:h={round(rh * k)}:qoffset={rq}" if rq else "null"
         dst = os.path.join(out_dir, name)
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", master(name), "-vf", roi, "-c:v", "libx264", "-preset", "slow",
                         "-crf", str(crf or c), "-x264-params", params, "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-an", dst], check=True)
@@ -205,16 +210,19 @@ def encode(out_dir, crf=None, params="ipratio=1.0:pbratio=1.0"):
 def build():
     import argparse
     ap = argparse.ArgumentParser(); ap.add_argument("cmd")
-    ap.add_argument("--tree", default=J(T2, "tree_kling.mp4")); ap.add_argument("--full", default=J(T2, "pool_kling.mp4"))
+    ap.add_argument("--tree", default=J(T2, "tree_kling2.mp4")); ap.add_argument("--full", default=J(T2, "pool_kling.mp4"))
     ap.add_argument("--pool", action="store_true", help="--full is the pool-crop video (POOL_BOX), not the whole frame")
     ap.add_argument("--fade", type=float, default=.75); ap.add_argument("--fps", type=float, default=24)
     ap.add_argument("--crf", type=int, default=0, help="override the per-view CRF")
     ap.add_argument("--stab", type=int, default=0, help="flow-compensated smoothing radius on the tree clip (0 = off)")
     ap.add_argument("--out", default=J("assets")); ap.add_argument("--no-write", action="store_true")
     ap.add_argument("--encode-only", action="store_true", help="only re-encode the lossless masters")
+    ap.add_argument("--start", type=int, default=12, help="rotate the loop: the file starts at this loop frame (hide the wrap in motion)")
+    ap.add_argument("--grow", type=int, default=45, help="crown mask margin (px, 1920 frame): >= max leaf sway")
     a = ap.parse_args()
     if a.encode_only:
         return encode(a.out, a.crf)
+    globals()["GROW"] = a.grow
     full_still = np.asarray(Image.open(J(T2, "still_frame.png")).convert("RGB"))
     tm19, wm19 = masks()
     tf = list(frames(a.tree, a.fps)); fv = list(frames(a.full, a.fps))
@@ -254,6 +262,7 @@ def build():
         # tail cross-fades into the head; the last loop frame is exactly comp[F-1], so the wrap to comp[F] is a normal step
         loop = comp[F:T - F] + [((1 - (j + 1) / F) * comp[T - F + j].astype(np.float32) + (j + 1) / F * comp[j]).round().astype(np.uint8)
                                 for j in range(F)] if F else comp[:T]
+        loop = loop[a.start:] + loop[:a.start]
         print(f"[info] {name}: {w}x{h}, Loop {len(loop)} Bilder = {len(loop) / a.fps:.2f} s (Ueberblendung {F})")
         report(loop, tm, " " + name)
         if not a.no_write:
