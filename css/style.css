@@ -570,3 +570,31 @@ html.menu-open{overflow:hidden}
 .hp-media video{opacity:0;transition:opacity 1.2s ease}
 .hp-media video.on{opacity:1}
 .hp-media::after{z-index:1}
+
+/* ---- Dark manifest (2026-11-11): photo -> dark statement -> light collections -> atelier -> dark material.
+   Same tone as the material band; the nav switches to a dark frosted bar over dark sections (js: navState). ---- */
+.manifest{background:var(--band);color:var(--band-fg)}
+.manifest .w{color:color-mix(in oklab,var(--band-fg) 34%,var(--band))}
+.manifest .w.on,.no-motion .manifest .w{color:var(--band-fg)}
+.nav.on-dark{color:var(--band-fg);background:color-mix(in oklab,var(--band) 80%,transparent);border-bottom-color:rgba(236,230,219,.1)}
+.nav.on-dark .logo{color:#fff}
+.nav.on-dark ul a{color:#A59C8D}
+.nav.on-dark ul a:hover{color:var(--band-fg)}
+.nav.on-dark .btn.solid{background:var(--band-fg);color:var(--band);border-color:var(--band-fg)}
+.menu-open .nav.on-dark{background:var(--bg);color:var(--fg);border-bottom-color:var(--line)}
+.menu-open .nav.on-dark .logo{color:var(--fg)}
+
+/* ---- Rhythm + spacing pass (2026-11-11): sections repeat dark -> off-white -> white:
+   manifest (dark) · collections (bg) · atelier (surface) · material (dark) · xxl (bg) · manufaktur (surface) · footer (dark).
+   One vertical spacing for every content section; all h2 the same size. ---- */
+:root{--sec:clamp(100px,16vh,150px)}
+@media (max-width:700px){:root{--sec:96px}}
+.manifest,.colls,.atelier,.band,.xxl,.since{padding-block:var(--sec)}
+.cstage{padding-bottom:0}
+.since{background:var(--surface);border-top:0}
+.f-top h2{font-size:clamp(1.9rem,4.2vw,3.6rem)}
+footer{--bg:var(--band);--fg:var(--band-fg);--muted:var(--band-muted);--line:rgba(236,230,219,.14);
+  background:var(--band);color:var(--fg);border-top:0;padding-block:var(--sec) 2rem}
+footer .f-col a,footer .sel{color:var(--fg)}
+.f-top{grid-template-columns:minmax(0,1.6fr) repeat(2,minmax(0,.7fr))}
+@media (max-width:760px){.f-top{grid-template-columns:1fr 1fr}}

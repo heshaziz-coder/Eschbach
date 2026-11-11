@@ -837,7 +837,12 @@ readTheme();
 const nav = document.getElementById('nav');
 // light nav while it sits on the hero picture (plain scroll check: also right at the very top and after jumps)
 const heroEl = document.getElementById('hero');
-const navState = () => { nav.classList.toggle('scrolled', scrollY > 20); nav.classList.toggle('on-hero', !!heroEl && scrollY < heroEl.offsetHeight - 72); };
+const darkEls = [...document.querySelectorAll('.manifest, .band, footer')];   // dark sections: nav becomes a dark bar over them
+const navState = () => {
+  const onHero = !!heroEl && scrollY < heroEl.offsetHeight - 72, mid = nav.offsetHeight / 2;
+  nav.classList.toggle('scrolled', scrollY > 20); nav.classList.toggle('on-hero', onHero);
+  nav.classList.toggle('on-dark', !onHero && darkEls.some(el => { const r = el.getBoundingClientRect(); return r.top <= mid && r.bottom >= mid; }));
+};
 addEventListener('scroll', navState, {passive:true}); addEventListener('resize', navState); navState();
 document.getElementById('news').addEventListener('submit', e => {
   e.preventDefault(); const v = document.getElementById('email').value.trim(), msg = document.getElementById('newsMsg');
