@@ -679,7 +679,7 @@ const LAVA = (() => {
     dPrice.previousElementSibling.textContent = 'Preis'; dPrice.textContent = form.price;
     dLink.href = v.url || m.url; dLink.firstChild.textContent = 'Im Shop ansehen ';
     // scene + form previews show the currently selected form / colour
-    list.querySelectorAll('.scene-btn').forEach(b => { b.style.backgroundImage = `url("assets/lava/${b.dataset.id}/thumb__${form.id}__${colour.id}.webp")`; });
+    list.querySelectorAll('.scene-btn').forEach(b => { b.style.backgroundImage = `url("assets/lava/${b.dataset.id}/thumb__${form.id}__${colour.id}.webp?v=3")`; });
     formsEl.querySelectorAll('.form-btn img').forEach((img, i) => { const t = (m.forms[i].variants[colour.id] || {}).thumb; if (t && !img.src.endsWith(t)) img.src = t; });
     if (window.gsap && !RM) gsap.fromTo(dName, {y:14, opacity:.4}, {y:0, opacity:1, duration:.6, ease:'power3.out'});
   }
@@ -690,7 +690,7 @@ const LAVA = (() => {
     list.innerHTML = '';
     m.scenes.forEach(s => {
       const b = document.createElement('button'); b.type = 'button'; b.className = 'scene-btn'; b.dataset.id = s.id;
-      b.style.backgroundImage = `url("${s.thumb}")`; b.innerHTML = `<span>${s.name}</span>`;
+      b.style.backgroundImage = `url("${s.thumb}?v=3")`; b.innerHTML = `<span>${s.name}</span>`;
       b.addEventListener('click', () => { scene = s; press(list, '.scene-btn', b); draw(); }); list.appendChild(b);
     });
     formsEl.innerHTML = '';
@@ -764,7 +764,7 @@ if (cstage){
 
 /* ---------------- Material loupe ---------------- */
 const tabsEl = document.getElementById('tabs'), flat = document.getElementById('flat'), fctx = flat.getContext('2d');
-const lensC = document.getElementById('lensC'), lctx = lensC.getContext('2d'), lens = document.getElementById('lens'), surf = document.getElementById('surface'), lensTag = document.getElementById('lensTag');
+const lensC = document.getElementById('lensC'), lctx = lensC.getContext('2d'), lens = document.getElementById('lens'), surf = document.getElementById('surface');
 const matChoices = [['loft',2],['terra',1],['antique',1],['lava',0],['granite',0],['vertical',0]];
 let lensPos = {x:.62, y:.48};
 // Blender surface macros (assets/textures/<id>.webp); procedural texture stays as fallback.
@@ -772,7 +772,7 @@ const texImgs = {}; let flatSel = '';
 function renderFlat(cid, ci){
   const coll0 = COLL.find(c=>c.id===cid);
   const done = img => { flat.width = img.naturalWidth; flat.height = img.naturalHeight; fctx.drawImage(img, 0, 0);
-    drawLens(); lensTag.textContent = `Lupe ×3 · ${coll0.name} · ${coll0.colors[ci][0]}`; };
+    drawLens(); };
   const cached = texImgs[cid];
   if (cached === false) { flatSel = cid; return renderFlatProcedural(cid, ci); }
   if (cached) { flatSel = cid; return done(cached); }
@@ -805,7 +805,6 @@ function renderFlatProcedural(cid, ci){
     }
   }
   fctx.putImageData(img,0,0); drawLens();
-  lensTag.textContent = `Lupe ×3 · ${coll.name} · ${coll.colors[ci][0]}`;
 }
 function drawLens(){
   const W = flat.width, H = flat.height, zoom = 3;
@@ -912,7 +911,7 @@ if (window.gsap && window.ScrollTrigger){
   const words = man.querySelectorAll('.w');
   ScrollTrigger.create({trigger:man, start:'top 78%', end:'bottom 45%', onUpdate:s => { const n = Math.round(s.progress*words.length); words.forEach((w,i) => w.classList.toggle('on', i < n)); }});
   if (!RM){
-    gsap.utils.toArray('.usp, .at-head, .colls-head, .mat-copy, .loupe-wrap, .xxl-copy, .scale, .since-copy, .markets, .f-top').forEach(el => {
+    gsap.utils.toArray('.at-head, .colls-head, .mat-copy, .loupe-wrap, .xxl-copy, .scale, .since-copy, .markets, .f-top').forEach(el => {
       gsap.from(el, {y:40, opacity:.35, duration:1.1, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 88%'}});
     });
     // relay: only ever one image sprints. Image i waits (lagging just below the screen) until image i-1 has

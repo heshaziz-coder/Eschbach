@@ -26,7 +26,7 @@ FORMS = [("u-pot", "U Pot", "D 90 × H 70 cm", "1.070 €"), ("long-balloon", "L
 COLOURS = [("volcanic-black", "Volcanic Black", "#2e2d2c"), ("antique-white", "Antique White", "#e4ddd0")]
 REF = ("u-pot", "volcanic-black")
 OUT_W, OUT_H, FOOT_Y = 1200, 1500, .88
-THUMB_BOX = (0, 300, 1200, 1200)
+THUMB_BOX = (0, 495, 1200, 1395)      # 4:3, full width, ends 75 px below the foot (y 1320): whole planter visible; y 300-1200 cut it off
 
 
 def pot_geometry(path):
